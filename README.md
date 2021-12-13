@@ -1,6 +1,6 @@
 # VODPlayer
 
-[![CI Status](https://img.shields.io/travis/32827363/VODPlayer.svg?style=flat)](https://travis-ci.org/32827363/VODPlayer)
+[![CI Status](https://img.shields.io/travis/songvuthy/VODPlayer.svg?style=flat)](https://travis-ci.org/songvuthy/VODPlayer)
 [![Version](https://img.shields.io/cocoapods/v/VODPlayer.svg?style=flat)](https://cocoapods.org/pods/VODPlayer)
 [![License](https://img.shields.io/cocoapods/l/VODPlayer.svg?style=flat)](https://cocoapods.org/pods/VODPlayer)
 [![Platform](https://img.shields.io/cocoapods/p/VODPlayer.svg?style=flat)](https://cocoapods.org/pods/VODPlayer)

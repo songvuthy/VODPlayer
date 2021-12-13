@@ -1,0 +1,803 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		022655253A68D3406F2B6AC1590D796B /* VODPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 365BF718C6E9E707F38FA757211311AD /* VODPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1890C8BF1C541DE39DCC2E0DBA35374A /* Pods-VODPlayer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B97AE7436ABCCCEF4B27B19BDE4840D /* Pods-VODPlayer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A543902AFFA543B99D69A10191EBAC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B257E70A955FF50F357137E7BA0B533E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		BE6A1F17AD282164F629E046F63DCD6A /* Pods-VODPlayer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87BB186C85F6C11C1B92693D06AB83F6 /* Pods-VODPlayer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C81B39312CA9E9F832D765CBCD6FB054 /* VODPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAEA616691B5B355048328954097014 /* VODPlayer-dummy.m */; };
+		D2168B80FBF32398CA22FE3B715D0B39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D2A17825A893ACEC9C0C9FE0FE034D19 /* Pods-VODPlayer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B900D95C0A9DD5656B7A8E3DC45A1402 /* Pods-VODPlayer_Tests-dummy.m */; };
+		D96B838B276734DE000F6D5A /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = D96B8387276734DE000F6D5A /* .gitkeep */; };
+		D96B838C276734DE000F6D5A /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = D96B8389276734DE000F6D5A /* .gitkeep */; };
+		D96B838F27673570000F6D5A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96B838E27673570000F6D5A /* Logger.swift */; };
+		EA8F935DBB767EDB70B91F53C6262211 /* Pods-VODPlayer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D293F10B2FFE9BB9B1FBB7AE91A0BE /* Pods-VODPlayer_Example-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7638124138027984FDD26AF19AF68FBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12FA35C47FB944CA6CD8BF71BD2262E7;
+			remoteInfo = "Pods-VODPlayer_Example";
+		};
+		D81DC967B3CEF64205883FD6CE0390FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 492E84D0A7256AAF7F70628981CF2A02;
+			remoteInfo = VODPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		014583EA7E512E3B7AC765154FF2393E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0DAEA616691B5B355048328954097014 /* VODPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VODPlayer-dummy.m"; sourceTree = "<group>"; };
+		0F346B0AC15A466D4389D676071B10BC /* Pods-VODPlayer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VODPlayer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		31FECC8D595852F7E8E8C033FBC14BF4 /* Pods-VODPlayer_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VODPlayer_Example"; path = Pods_VODPlayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		325681D4B6FFA598502CF004F30559D5 /* VODPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = VODPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		365BF718C6E9E707F38FA757211311AD /* VODPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VODPlayer-umbrella.h"; sourceTree = "<group>"; };
+		5125DCC3CE128F4A1374D165EA0737BF /* VODPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VODPlayer.release.xcconfig; sourceTree = "<group>"; };
+		5C00AA425719E60DF920786A42687636 /* Pods-VODPlayer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VODPlayer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5E99226518C4493CEF20414B163C6AC0 /* VODPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VODPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B97AE7436ABCCCEF4B27B19BDE4840D /* Pods-VODPlayer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VODPlayer_Tests-umbrella.h"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		74283A472049E4E00E8CE263D80C77E4 /* VODPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VODPlayer.modulemap; sourceTree = "<group>"; };
+		779AB5AEEB2987EDCD14F2F715F4405E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		78A143064554C3E418CFBED74460972B /* VODPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VODPlayer-prefix.pch"; sourceTree = "<group>"; };
+		8004F9D24ED29F16A1BB3C73605B97DA /* Pods-VODPlayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VODPlayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		81D6F861307F16146DAB36828CDB5DF2 /* Pods-VODPlayer_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VODPlayer_Example-Info.plist"; sourceTree = "<group>"; };
+		87BB186C85F6C11C1B92693D06AB83F6 /* Pods-VODPlayer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VODPlayer_Example-umbrella.h"; sourceTree = "<group>"; };
+		8B0AA8DC1C79327B4369A7ACC28BB81A /* Pods-VODPlayer_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VODPlayer_Tests"; path = Pods_VODPlayer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9859EC3DFBC3EFEACCE62C17FB939DC9 /* Pods-VODPlayer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VODPlayer_Tests.modulemap"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DED33802C3CCF24420D176480D9633B /* VODPlayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VODPlayer-Info.plist"; sourceTree = "<group>"; };
+		AE5FEFBF33B68BC45A4F3D6C304995BE /* Pods-VODPlayer_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VODPlayer_Tests-Info.plist"; sourceTree = "<group>"; };
+		B0E245E5172BAD192E803558510A22BA /* Pods-VODPlayer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VODPlayer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		B1E417FAAFF02114F366038E4958F099 /* Pods-VODPlayer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VODPlayer_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B900D95C0A9DD5656B7A8E3DC45A1402 /* Pods-VODPlayer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VODPlayer_Tests-dummy.m"; sourceTree = "<group>"; };
+		BA9DA923F07A073AFAAB4BA43C63BF81 /* Pods-VODPlayer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VODPlayer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BC3CBE04A5CBEF639CB9A7D9E7C4937D /* VODPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VODPlayer.debug.xcconfig; sourceTree = "<group>"; };
+		C73945ABD431E07C4B389F35F0D1EB79 /* Pods-VODPlayer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VODPlayer_Example.modulemap"; sourceTree = "<group>"; };
+		D07760F27267B5D0215943D132602311 /* Pods-VODPlayer_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VODPlayer_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D4D293F10B2FFE9BB9B1FBB7AE91A0BE /* Pods-VODPlayer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VODPlayer_Example-dummy.m"; sourceTree = "<group>"; };
+		D4F0B0B3F3EC4DB0A72541FB649B9F9A /* Pods-VODPlayer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VODPlayer_Example-frameworks.sh"; sourceTree = "<group>"; };
+		D96B8387276734DE000F6D5A /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		D96B8389276734DE000F6D5A /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		D96B838E27673570000F6D5A /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		E94134B0AB00951193C0A6EE951D5CE7 /* Pods-VODPlayer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VODPlayer_Example.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C9D86129701327D63301B83BFEF5B0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2168B80FBF32398CA22FE3B715D0B39 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		344E2EF3092F5A67D1B4EA401A398D65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B257E70A955FF50F357137E7BA0B533E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA8D89A67E1E44A4E0B3926C0169AE3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A543902AFFA543B99D69A10191EBAC6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AB034FFAF39A055E782341D1FE9500F /* Pods-VODPlayer_Example */ = {
+			isa = PBXGroup;
+			children = (
+				C73945ABD431E07C4B389F35F0D1EB79 /* Pods-VODPlayer_Example.modulemap */,
+				BA9DA923F07A073AFAAB4BA43C63BF81 /* Pods-VODPlayer_Example-acknowledgements.markdown */,
+				B0E245E5172BAD192E803558510A22BA /* Pods-VODPlayer_Example-acknowledgements.plist */,
+				D4D293F10B2FFE9BB9B1FBB7AE91A0BE /* Pods-VODPlayer_Example-dummy.m */,
+				D4F0B0B3F3EC4DB0A72541FB649B9F9A /* Pods-VODPlayer_Example-frameworks.sh */,
+				81D6F861307F16146DAB36828CDB5DF2 /* Pods-VODPlayer_Example-Info.plist */,
+				87BB186C85F6C11C1B92693D06AB83F6 /* Pods-VODPlayer_Example-umbrella.h */,
+				8004F9D24ED29F16A1BB3C73605B97DA /* Pods-VODPlayer_Example.debug.xcconfig */,
+				E94134B0AB00951193C0A6EE951D5CE7 /* Pods-VODPlayer_Example.release.xcconfig */,
+			);
+			name = "Pods-VODPlayer_Example";
+			path = "Target Support Files/Pods-VODPlayer_Example";
+			sourceTree = "<group>";
+		};
+		2F393B082F9CF80DDFDE1618979C55A9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				74283A472049E4E00E8CE263D80C77E4 /* VODPlayer.modulemap */,
+				0DAEA616691B5B355048328954097014 /* VODPlayer-dummy.m */,
+				9DED33802C3CCF24420D176480D9633B /* VODPlayer-Info.plist */,
+				78A143064554C3E418CFBED74460972B /* VODPlayer-prefix.pch */,
+				365BF718C6E9E707F38FA757211311AD /* VODPlayer-umbrella.h */,
+				BC3CBE04A5CBEF639CB9A7D9E7C4937D /* VODPlayer.debug.xcconfig */,
+				5125DCC3CE128F4A1374D165EA0737BF /* VODPlayer.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/VODPlayer";
+			sourceTree = "<group>";
+		};
+		3D9962CECF62B33B4E9F582E6E9CEDD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31FECC8D595852F7E8E8C033FBC14BF4 /* Pods-VODPlayer_Example */,
+				8B0AA8DC1C79327B4369A7ACC28BB81A /* Pods-VODPlayer_Tests */,
+				5E99226518C4493CEF20414B163C6AC0 /* VODPlayer.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		8C7B2DAC4CF3CE5B15112E65A07DE4E8 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				779AB5AEEB2987EDCD14F2F715F4405E /* LICENSE */,
+				014583EA7E512E3B7AC765154FF2393E /* README.md */,
+				325681D4B6FFA598502CF004F30559D5 /* VODPlayer.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		9362BD99021D45F20C6AB17992FC3447 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AB034FFAF39A055E782341D1FE9500F /* Pods-VODPlayer_Example */,
+				A5269A941DCF5545A424F60EBF776F29 /* Pods-VODPlayer_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A2C502D3B9C66ADAB3D1CBC2F1111F81 /* VODPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				D96B8386276734DE000F6D5A /* Assets */,
+				D96B8388276734DE000F6D5A /* Classes */,
+				8C7B2DAC4CF3CE5B15112E65A07DE4E8 /* Pod */,
+				2F393B082F9CF80DDFDE1618979C55A9 /* Support Files */,
+			);
+			name = VODPlayer;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		A5269A941DCF5545A424F60EBF776F29 /* Pods-VODPlayer_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9859EC3DFBC3EFEACCE62C17FB939DC9 /* Pods-VODPlayer_Tests.modulemap */,
+				5C00AA425719E60DF920786A42687636 /* Pods-VODPlayer_Tests-acknowledgements.markdown */,
+				D07760F27267B5D0215943D132602311 /* Pods-VODPlayer_Tests-acknowledgements.plist */,
+				B900D95C0A9DD5656B7A8E3DC45A1402 /* Pods-VODPlayer_Tests-dummy.m */,
+				AE5FEFBF33B68BC45A4F3D6C304995BE /* Pods-VODPlayer_Tests-Info.plist */,
+				6B97AE7436ABCCCEF4B27B19BDE4840D /* Pods-VODPlayer_Tests-umbrella.h */,
+				0F346B0AC15A466D4389D676071B10BC /* Pods-VODPlayer_Tests.debug.xcconfig */,
+				B1E417FAAFF02114F366038E4958F099 /* Pods-VODPlayer_Tests.release.xcconfig */,
+			);
+			name = "Pods-VODPlayer_Tests";
+			path = "Target Support Files/Pods-VODPlayer_Tests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D9ECF3678AD4C0D5F3204DCBD2B4C8BF /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				3D9962CECF62B33B4E9F582E6E9CEDD3 /* Products */,
+				9362BD99021D45F20C6AB17992FC3447 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D96B8386276734DE000F6D5A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D96B8387276734DE000F6D5A /* .gitkeep */,
+			);
+			name = Assets;
+			path = VODPlayer/Assets;
+			sourceTree = "<group>";
+		};
+		D96B8388276734DE000F6D5A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D96B8389276734DE000F6D5A /* .gitkeep */,
+				D96B838E27673570000F6D5A /* Logger.swift */,
+			);
+			name = Classes;
+			path = VODPlayer/Classes;
+			sourceTree = "<group>";
+		};
+		D9ECF3678AD4C0D5F3204DCBD2B4C8BF /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2C502D3B9C66ADAB3D1CBC2F1111F81 /* VODPlayer */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		009A5DD899899E75B49AE78168C76623 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1890C8BF1C541DE39DCC2E0DBA35374A /* Pods-VODPlayer_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC7A324A1EC22FE298F6F3829986984B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE6A1F17AD282164F629E046F63DCD6A /* Pods-VODPlayer_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8340BF4B473EA38ED5A031638DB7698 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				022655253A68D3406F2B6AC1590D796B /* VODPlayer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		12FA35C47FB944CA6CD8BF71BD2262E7 /* Pods-VODPlayer_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C120F1646174514FC5A48890853F257 /* Build configuration list for PBXNativeTarget "Pods-VODPlayer_Example" */;
+			buildPhases = (
+				AC7A324A1EC22FE298F6F3829986984B /* Headers */,
+				AA71CDC3946C2904E9862DB9655CBE34 /* Sources */,
+				2C9D86129701327D63301B83BFEF5B0C /* Frameworks */,
+				4D8D8559F0A2D799985BFEC0A9B1911D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				344E79708B00B8FD831927892B1224E2 /* PBXTargetDependency */,
+			);
+			name = "Pods-VODPlayer_Example";
+			productName = Pods_VODPlayer_Example;
+			productReference = 31FECC8D595852F7E8E8C033FBC14BF4 /* Pods-VODPlayer_Example */;
+			productType = "com.apple.product-type.framework";
+		};
+		492E84D0A7256AAF7F70628981CF2A02 /* VODPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3ED2F0CBBA8D42C93DBCCA258EFCDE4 /* Build configuration list for PBXNativeTarget "VODPlayer" */;
+			buildPhases = (
+				B8340BF4B473EA38ED5A031638DB7698 /* Headers */,
+				622C5454381A3D70C51A8894CBCCFDC7 /* Sources */,
+				BA8D89A67E1E44A4E0B3926C0169AE3C /* Frameworks */,
+				31571C0DFEAA5655AFCC8B25400274AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VODPlayer;
+			productName = VODPlayer;
+			productReference = 5E99226518C4493CEF20414B163C6AC0 /* VODPlayer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BB96200863C8DF5448A49B5295181A8D /* Pods-VODPlayer_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A81ED68B060AF1352C433A3CB1D55612 /* Build configuration list for PBXNativeTarget "Pods-VODPlayer_Tests" */;
+			buildPhases = (
+				009A5DD899899E75B49AE78168C76623 /* Headers */,
+				66927DBDDCC35717602890AD12E1C1B8 /* Sources */,
+				344E2EF3092F5A67D1B4EA401A398D65 /* Frameworks */,
+				C8A8C89316C2DF92846EA020ADA2BD95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8CC9C37AECDA06CC74705B79F1AED27 /* PBXTargetDependency */,
+			);
+			name = "Pods-VODPlayer_Tests";
+			productName = Pods_VODPlayer_Tests;
+			productReference = 8B0AA8DC1C79327B4369A7ACC28BB81A /* Pods-VODPlayer_Tests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					492E84D0A7256AAF7F70628981CF2A02 = {
+						LastSwiftMigration = 1310;
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 3D9962CECF62B33B4E9F582E6E9CEDD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				12FA35C47FB944CA6CD8BF71BD2262E7 /* Pods-VODPlayer_Example */,
+				BB96200863C8DF5448A49B5295181A8D /* Pods-VODPlayer_Tests */,
+				492E84D0A7256AAF7F70628981CF2A02 /* VODPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		31571C0DFEAA5655AFCC8B25400274AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D96B838B276734DE000F6D5A /* .gitkeep in Resources */,
+				D96B838C276734DE000F6D5A /* .gitkeep in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D8D8559F0A2D799985BFEC0A9B1911D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8A8C89316C2DF92846EA020ADA2BD95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		622C5454381A3D70C51A8894CBCCFDC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C81B39312CA9E9F832D765CBCD6FB054 /* VODPlayer-dummy.m in Sources */,
+				D96B838F27673570000F6D5A /* Logger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66927DBDDCC35717602890AD12E1C1B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2A17825A893ACEC9C0C9FE0FE034D19 /* Pods-VODPlayer_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA71CDC3946C2904E9862DB9655CBE34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8F935DBB767EDB70B91F53C6262211 /* Pods-VODPlayer_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		344E79708B00B8FD831927892B1224E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VODPlayer;
+			target = 492E84D0A7256AAF7F70628981CF2A02 /* VODPlayer */;
+			targetProxy = D81DC967B3CEF64205883FD6CE0390FD /* PBXContainerItemProxy */;
+		};
+		C8CC9C37AECDA06CC74705B79F1AED27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-VODPlayer_Example";
+			target = 12FA35C47FB944CA6CD8BF71BD2262E7 /* Pods-VODPlayer_Example */;
+			targetProxy = 7638124138027984FDD26AF19AF68FBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6A959152186ABC4DF74051936197AEFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E94134B0AB00951193C0A6EE951D5CE7 /* Pods-VODPlayer_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VODPlayer_Example/Pods-VODPlayer_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VODPlayer_Example/Pods-VODPlayer_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B211D67C4CB4EB519C3E188778D31A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F346B0AC15A466D4389D676071B10BC /* Pods-VODPlayer_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VODPlayer_Tests/Pods-VODPlayer_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VODPlayer_Tests/Pods-VODPlayer_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		EAE6D892AD6B13C7692B3206FEC1950B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8004F9D24ED29F16A1BB3C73605B97DA /* Pods-VODPlayer_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VODPlayer_Example/Pods-VODPlayer_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VODPlayer_Example/Pods-VODPlayer_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F388F4BC5BDB7A2D5026D6ED8F16574E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC3CBE04A5CBEF639CB9A7D9E7C4937D /* VODPlayer.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VODPlayer/VODPlayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VODPlayer/VODPlayer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VODPlayer/VODPlayer.modulemap";
+				PRODUCT_MODULE_NAME = VODPlayer;
+				PRODUCT_NAME = VODPlayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FD0FC153BC3903ADC87214841AAD0D48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1E417FAAFF02114F366038E4958F099 /* Pods-VODPlayer_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VODPlayer_Tests/Pods-VODPlayer_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VODPlayer_Tests/Pods-VODPlayer_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FDDFCE4A7A33F2689F6DB8A729A01627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5125DCC3CE128F4A1374D165EA0737BF /* VODPlayer.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VODPlayer/VODPlayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VODPlayer/VODPlayer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VODPlayer/VODPlayer.modulemap";
+				PRODUCT_MODULE_NAME = VODPlayer;
+				PRODUCT_NAME = VODPlayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C120F1646174514FC5A48890853F257 /* Build configuration list for PBXNativeTarget "Pods-VODPlayer_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAE6D892AD6B13C7692B3206FEC1950B /* Debug */,
+				6A959152186ABC4DF74051936197AEFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3ED2F0CBBA8D42C93DBCCA258EFCDE4 /* Build configuration list for PBXNativeTarget "VODPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F388F4BC5BDB7A2D5026D6ED8F16574E /* Debug */,
+				FDDFCE4A7A33F2689F6DB8A729A01627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A81ED68B060AF1352C433A3CB1D55612 /* Build configuration list for PBXNativeTarget "Pods-VODPlayer_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B211D67C4CB4EB519C3E188778D31A8B /* Debug */,
+				FD0FC153BC3903ADC87214841AAD0D48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module VODPlayer {
+  umbrella header "VODPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}

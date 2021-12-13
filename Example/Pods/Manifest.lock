@@ -1,0 +1,16 @@
+PODS:
+  - VODPlayer (0.1.0)
+
+DEPENDENCIES:
+  - VODPlayer (from `../`)
+
+EXTERNAL SOURCES:
+  VODPlayer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  VODPlayer: ecea0c2c754c8f3c8b4387b53419b6641eef559e
+
+PODFILE CHECKSUM: b03c55f9fd0f263fa309e4268fd4d6cf7082440c
+
+COCOAPODS: 1.11.2
