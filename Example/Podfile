@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'VODPlayer_Example' do
+  pod 'VODPlayer', :path => '../'
+
+  target 'VODPlayer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
