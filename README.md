@@ -22,7 +22,7 @@ pod 'VODPlayer'
 
 ## Author
 
-32827363, songvuthy93@gmail.com
+Song Vuthy, songvuthy93@gmail.com
 
 ## License
 
