@@ -18,7 +18,6 @@
 		3B60C02F6E42FD06B128473E00A94224 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D705690D879064ED84970813189D8D4 /* ConstraintLayoutSupport.swift */; };
 		3CD5FAFC746A76D73C3F501734199DFF /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E066869A95E00B949CBA4D2284C35F /* Typealiases.swift */; };
 		3DEDFA52B3A196F6D3E1F0937617628A /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF299D2EEB87E7DD02630E87B96224 /* ConstraintLayoutGuide+Extensions.swift */; };
-		416D9B09CEC5149F04DF5FECEBA26E08 /* VODAppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D169DF521BDC20DB4181709B652F0EE /* VODAppConstants.swift */; };
 		43863B6D6A0E47B6648BB7B469736EDD /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44C5B72775F6AF0891BF331F32FE10D /* LayoutConstraint.swift */; };
 		4CA13A0527BC57DE2C54A0F3B5ED8652 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C01543F3BCEDEE51ABAA696513D0B /* LayoutConstraintItem.swift */; };
 		51A4A1046676D304410544EB56732A49 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50380F281EC3EE769C85035CCEA77226 /* Constraint.swift */; };
@@ -125,7 +124,6 @@
 		464C01543F3BCEDEE51ABAA696513D0B /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		474AFC560A8B414B467174737DBC891A /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
 		47B200BD964F52F6693D4168248B8645 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
-		4D169DF521BDC20DB4181709B652F0EE /* VODAppConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODAppConstants.swift; sourceTree = "<group>"; };
 		4E0EEF4DBBEA7D373614A757DE7856D0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		50380F281EC3EE769C85035CCEA77226 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
 		50A9170B12B1F27845F367AA34888C4B /* VODPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VODPlayer.debug.xcconfig; sourceTree = "<group>"; };
@@ -296,7 +294,6 @@
 		4DED5D93B9E5BEC0D0E159A4CE86A6D5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				4D169DF521BDC20DB4181709B652F0EE /* VODAppConstants.swift */,
 				94868D98E1750E12AE4A9A7A777551DD /* VODPlayerBaseView.swift */,
 				B6F74933567741798E19A1FE9DCE40C0 /* VODPlayerExstension.swift */,
 			);
@@ -725,7 +722,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD2863611C0948D854C5100B854A4CF6 /* TopMaskView.swift in Sources */,
-				416D9B09CEC5149F04DF5FECEBA26E08 /* VODAppConstants.swift in Sources */,
 				0DB67A612C2498638C535BA4FF3FC539 /* VODPlayer.swift in Sources */,
 				C4957965F0F0E708D6992BA0ED62FEC8 /* VODPlayer-dummy.m in Sources */,
 				EF81751E1EB3D740D7733F8FCD2EF986 /* VODPlayerBaseView.swift in Sources */,

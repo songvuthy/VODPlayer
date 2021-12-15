@@ -27,7 +27,7 @@ class VODStackView: VODBaseView {
         imageView.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
             make.centerY.equalToSuperview()
-            make.width.height.equalTo(VODAppConstants.BaseHeight.btn_height).priority(750)
+            make.width.height.equalTo(VODPlayerConf.btnHeightTopMaskView).priority(750)
         }
     }
 }

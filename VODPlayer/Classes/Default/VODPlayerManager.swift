@@ -13,9 +13,14 @@ public let VODPlayerConf = VODPlayerManager.shared
 open class VODPlayerManager {
     public static let shared = VODPlayerManager()
     
-    /// tint color
-    open var tintColor = UIColor.white
+    open var heightTopMaskView    = 60
+    open var heightBottomMaskView = 60
+    open var btnHeightTopMaskView = 25
     
+    /// tint color
+    open var tintColor    = UIColor.white
+    open var defaultColor = UIColor.white
+    open var activeColor  = #colorLiteral(red: 0.9960784314, green: 0.5333333333, blue: 0.01176470588, alpha: 1) // #FDB316
     /// should auto play
     open var shouldAutoPlay = true
     

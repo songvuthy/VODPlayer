@@ -17,10 +17,15 @@ class BottomMaskView: VODBaseView {
     var currentTimeLabel = UILabel()
     
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setupConstraint()
+    }
+    
     override func setupComponents() {
         addSubview(currentTimeLabel)
         currentTimeLabel.textColor  = UIColor.white
-        currentTimeLabel.font       = VODAppConstants.BaseFont.font_14
+        currentTimeLabel.font       = .systemFont(ofSize: 14, weight: .regular)
         currentTimeLabel.text       = "00:00:00"
         currentTimeLabel.textAlignment = NSTextAlignment.center
         
@@ -34,24 +39,25 @@ class BottomMaskView: VODBaseView {
         timeSlider.maximumValue   = 1.0
         timeSlider.minimumValue   = 0.0
         timeSlider.value          = 0.0
-        timeSlider.thumbTintColor = VODAppConstants.BaseColor.C2
+        timeSlider.thumbTintColor = #colorLiteral(red: 0.9960784314, green: 0.5333333333, blue: 0.01176470588, alpha: 1) // #FDB316
         timeSlider.maximumTrackTintColor = .clear
-        timeSlider.minimumTrackTintColor = VODAppConstants.BaseColor.C2
+        timeSlider.minimumTrackTintColor = #colorLiteral(red: 0.9960784314, green: 0.5333333333, blue: 0.01176470588, alpha: 1) // #FDB316
         
     }
     override func setupConstraint() {
         
         currentTimeLabel.snp.remakeConstraints { (make) in
             make.width.equalTo(currentTimeLabel.intrinsicContentSize.width + 6)
-            make.right.equalToSuperview().offset(-(vodIsFullScreen ? G_STATUSHEIGHT : 16)).priority(750)
+            make.right.equalToSuperview().offset(-(vodIsFullScreen ? UIApplication.shared.statusBarFrame.size.height + 44 : 16)).priority(750)
             make.centerY.equalToSuperview().offset(2)
+
         }
         
         
         progressView.snp.remakeConstraints { (make) in
             make.centerY.equalToSuperview().offset(2)
             make.height.equalTo(3)
-            make.left.equalToSuperview().offset(vodIsFullScreen ? G_STATUSHEIGHT : 16).priority(750)
+            make.left.equalToSuperview().offset(vodIsFullScreen ? UIApplication.shared.statusBarFrame.size.height + 44 : 16).priority(750)
             make.right.equalTo(currentTimeLabel.snp.left).offset(-6).priority(750)
         }
         timeSlider.snp.remakeConstraints { (make) in

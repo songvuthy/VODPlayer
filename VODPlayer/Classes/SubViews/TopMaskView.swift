@@ -21,30 +21,24 @@ class TopMaskView: VODBaseView {
     override func setupComponents() {
         [backView, stackView].forEach({ addSubview($0) })
         backView.addSubview(ivBack)
-        //
-        //        downloadView.vodEnableView(isEnable: false)
-        //        mirrorView.vodEnableView(isEnable:   false)
-        //        subtitleView.vodEnableView(isEnable: false)
-        //        settingView.vodEnableView(isEnable:  false)
+
     }
     
     override func setupConstraint() {
         backView.snp.remakeConstraints { (make) in
-            make.height.width.equalTo(G_NAVCHEIGHT - G_STATUSHEIGHT)
-            make.centerY.equalToSuperview().offset(!vodIsFullScreen ? G_STATUSHEIGHT / 2 : 0)
-            make.left.equalToSuperview().offset(vodIsFullScreen ? G_STATUSHEIGHT : 16).priority(750)
-            
-            
+            make.height.width.equalTo(VODPlayerConf.heightTopMaskView - 16)
+            make.centerY.equalToSuperview()
+            make.left.equalToSuperview().offset(vodIsFullScreen ? UIApplication.shared.statusBarFrame.size.height + 44 : 0).priority(750)
         }
         ivBack.snp.remakeConstraints { (make) in
-            make.width.height.equalTo(VODAppConstants.BaseHeight.btn_height)
+            make.width.height.equalTo(VODPlayerConf.btnHeightTopMaskView)
             make.center.equalToSuperview()
         }
         
         stackView.snp.remakeConstraints { (make) in
-            make.height.equalTo(G_NAVCHEIGHT - G_STATUSHEIGHT)
-            make.centerY.equalToSuperview().offset(!vodIsFullScreen ? G_STATUSHEIGHT / 2 : 0)
-            make.right.equalToSuperview().offset(-( vodIsFullScreen ? G_STATUSHEIGHT : 16)).priority(750)
+            make.height.equalTo(VODPlayerConf.heightTopMaskView)
+            make.centerY.equalToSuperview()
+            make.right.equalToSuperview().offset(-( vodIsFullScreen ? UIApplication.shared.statusBarFrame.size.height + 44 : 16)).priority(750)
         }
     }
     
@@ -106,7 +100,7 @@ extension UIView {
 extension UIImageView {
     func vodEnableImageView(isActive: Bool = true) {
         self.image = self.image?.filled(
-            with: isActive ? VODAppConstants.BaseColor.C2 : VODAppConstants.BaseColor.C1
+            with: isActive ? VODPlayerConf.activeColor : VODPlayerConf.defaultColor
         )
     }
 }

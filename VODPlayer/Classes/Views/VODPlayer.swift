@@ -6,31 +6,25 @@
 //
 
 import UIKit
-
-let G_STATUSHEIGHT = UIApplication.shared.statusBarFrame.size.height
-let G_NAVCHEIGHT = G_STATUSHEIGHT + 44
-
+import SnapKit
 public class VODPlayer: VODBaseView {
     open var backBlock:(() -> Void)?
     
-    fileprivate var playerControls: VODPlayerControls!
-    public var contentFrame         = CGRect.zero
-    
+    fileprivate var playerControls = VODPlayerControls()
     override func setupComponents() {
-        playerControls = VODPlayerControls(frame: frame)
+        backgroundColor =  #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1) // #333333
         addSubview(playerControls)
         
     }
     override func setupConstraint() {
-        
-        
         /// PlayerControls
-        playerControls.frame = contentFrame
-        playerControls.configureLayout()
+        playerControls.snp.remakeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
     }
-    
-    public func configureLayout() {
-        contentFrame = frame
+    public override func layoutSubviews() {
+        super.layoutSubviews()
         setupConstraint()
     }
     
