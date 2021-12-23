@@ -26,7 +26,7 @@ class TopMaskView: VODBaseView {
     
     override func setupConstraint() {
         backView.snp.remakeConstraints { (make) in
-            make.height.width.equalTo(VODPlayerConf.heightTopMaskView - 16)
+            make.height.width.equalTo(VODPlayerConf.heightTopMaskView)
             make.centerY.equalToSuperview()
             make.left.equalToSuperview().offset(vodIsFullScreen ? UIApplication.shared.statusBarFrame.size.height + 44 : 0).priority(750)
         }

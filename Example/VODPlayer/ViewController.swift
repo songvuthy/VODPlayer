@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import VODPlayer
 
 class ViewController: UIViewController {
     
@@ -38,14 +39,18 @@ class ViewController: UIViewController {
     
     @objc func handleTap() {
 
-        // Confi
+        let resource = VODPlayerResource.init(
+            movieId: 0, url: URL(string: "https://multiplatform-f.akamaihd.net/i/multi/april11/sintel/sintel-hd_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,.mp4.csmil/master.m3u8")!
+        )
+        
+        // Config
         let vc = PlayerVC()
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .fullScreen
         // Start present VODPlayer
-        self.present(vc, animated: true, completion: {[self] in /// Completion present VODPlayerVC
+        self.present(vc, animated: true, completion: { /// Completion present VODPlayerVC
             // Call this func for preparePlayVideo
-//            vc.preparePlayVideo(resource: resource)
+            vc.preparePlayVideo(resource: resource)
         })
     }
     override func didReceiveMemoryWarning() {

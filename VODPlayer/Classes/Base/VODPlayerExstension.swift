@@ -10,6 +10,19 @@ import Foundation
 
 
 extension UIView {
+    func vodPerformSpringAnimation(completion: ((Bool) -> Void)? = nil) {
+        self.alpha = 1
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {[self] in
+            self.transform = CGAffineTransform.init(scaleX: 1.2, y: 1.2)
+            //reducing the size
+            UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {[self] in
+                self.transform = CGAffineTransform.init(scaleX: 1, y: 1)
+            }) { (status) in
+                completion?(status)
+            }
+        })
+    }
+    
     var vodIsFullScreen: Bool {
         return UIApplication.shared.statusBarOrientation.isLandscape
     }
@@ -17,6 +30,102 @@ extension UIView {
     func VODImageResourcePath(_ fileName: String) -> UIImage? {
         let bundle = Bundle(for: VODPlayer.self)
         return UIImage(named: fileName, in: bundle, compatibleWith: nil)
+    }
+    var x : CGFloat {
+        get {
+            return frame.origin.x
+        }
+        set {
+            var tempFrame : CGRect = frame
+            tempFrame.origin.x = newValue
+            frame = tempFrame
+        }
+    }
+    
+    var y : CGFloat {
+        get {
+            return frame.origin.y
+        }
+        set {
+            var tempFrame : CGRect = frame
+            tempFrame.origin.y = newValue
+            frame = tempFrame
+        }
+    }
+    
+    var width : CGFloat {
+        get {
+            return frame.size.width
+        }
+        set {
+            var tempFrame : CGRect = frame
+            tempFrame.size.width = newValue
+            frame = tempFrame
+        }
+    }
+    
+    var height : CGFloat {
+        get {
+            return frame.size.height
+        }
+        set {
+            var tempFrame : CGRect = frame
+            tempFrame.size.height = newValue
+            frame = tempFrame
+        }
+    }
+    
+    var centerX : CGFloat {
+        get {
+            return center.x
+        }
+        set {
+            var tempCenter : CGPoint = center
+            tempCenter.x = newValue
+            center = tempCenter
+        }
+    }
+    var centerY : CGFloat {
+        get {
+            return center.y
+        }
+        set {
+            var tempCenter : CGPoint = center
+            tempCenter.y = newValue
+            center = tempCenter
+        }
+    }
+    var size : CGSize {
+        get {
+            return frame.size
+        }
+        set {
+            var tempFrame : CGRect = frame
+            tempFrame.size = newValue
+            frame = tempFrame
+        }
+    }
+    
+    var right : CGFloat {
+        get {
+            return frame.origin.x + frame.size.width
+        }
+        set {
+            var tempFrame : CGRect = frame
+            tempFrame.origin.x = newValue - frame.size.width
+            frame = tempFrame
+        }
+    }
+    
+    var bottom : CGFloat {
+        get {
+            return frame.origin.y + frame.size.height
+        }
+        set {
+            var tempFrame : CGRect = frame
+            tempFrame.origin.y = newValue - frame.size.height
+            frame = tempFrame
+        }
     }
 }
 
@@ -91,9 +200,20 @@ extension UIImage {
     }
 }
 
-
+extension UIApplication {
+    static var safeFrame: CGRect {
+        var safeArea: CGRect = .zero
+        if #available(iOS 11.0, *) {
+            let window = UIApplication.shared.windows[0]
+            let safeFrame = window.safeAreaLayoutGuide.layoutFrame
+            safeArea = safeFrame
+        }
+        return safeArea
+    }
+}
 
 extension VODPlayerControls {
+    
     public enum ButtonType: Int {
         case play       = 101
         case replay     = 102
@@ -112,5 +232,30 @@ extension VODPlayerControls {
         case cancelDownload = 108
         case skipPreview    = 109
         
+    }
+    
+    static func formatSecondsToString(_ seconds: TimeInterval) -> String {
+        if seconds.isNaN {
+            return "00:00:00"
+        }
+        let hours = Int(seconds) / 3600
+        let min = Int(seconds / 60) % 60
+        let sec = Int(seconds.truncatingRemainder(dividingBy: 60))
+        if hours != 0{
+            return String(format: "%02d:%02d:%02d",hours, min, sec)
+        }else{
+            return String(format: "%02d:%02d", min, sec)
+        }
+    }
+}
+
+extension TimeInterval {
+    var secToMillisecond: Int {
+        return Int((self*1000))
+    }
+}
+extension Int {
+    var msToSeconds: Double {
+        return Double(self) / 1000
     }
 }

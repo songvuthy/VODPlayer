@@ -23,6 +23,7 @@ class PlayerVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor =  .white
         view.addSubview(player)
+        VODPlayerConf.btnPre10sPadding = 70
         player.backBlock = {[self] in
             dismissVC()
         }
@@ -41,14 +42,18 @@ class PlayerVC: UIViewController {
         }
     }
     
-//    MARK: - Functions
+    
+    // MARK: - prepare play video
+
     func preparePlayVideo(resource: VODPlayerResource) {
         self.resource = resource
+        player.setVideo(resource: self.resource)
     }
     
     private func dismissVC(){
-        
+        player.prepareToDeinit()
         dismiss(animated: true, completion: nil)
+        
     }
 
 }

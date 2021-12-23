@@ -117,7 +117,7 @@
 		27AAE18B599F1BBE99A752C561F47EEF /* VODStackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODStackView.swift; sourceTree = "<group>"; };
 		2975CA5A0D26BC84F3EE9912FEBDA795 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
 		31B9C6AB5DD36FB06B80159B3081757A /* VODPlayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VODPlayer-Info.plist"; sourceTree = "<group>"; };
-		31FECC8D595852F7E8E8C033FBC14BF4 /* Pods-VODPlayer_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VODPlayer_Example"; path = Pods_VODPlayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31FECC8D595852F7E8E8C033FBC14BF4 /* Pods_VODPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VODPlayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		391A6F8B42D2CD885F8F3C4CE6859439 /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
 		3D705690D879064ED84970813189D8D4 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
 		3DF1ECDEE08B78ED5353460DBDDFD0F3 /* VODPlayerResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayerResource.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		56006AA49A060CA2830F32CD6F394823 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
 		58901E9C3674A27F8A38CDD7A9051E62 /* VODPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VODPlayer-umbrella.h"; sourceTree = "<group>"; };
 		5C00AA425719E60DF920786A42687636 /* Pods-VODPlayer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VODPlayer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5E99226518C4493CEF20414B163C6AC0 /* VODPlayer */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VODPlayer; path = VODPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E99226518C4493CEF20414B163C6AC0 /* VODPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VODPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C5188AE61F0E667CD9E7ED28CDD61C /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
 		6A9341666EAC154422A032092A7DC2D7 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
 		6B97AE7436ABCCCEF4B27B19BDE4840D /* Pods-VODPlayer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VODPlayer_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -145,13 +145,13 @@
 		8004F9D24ED29F16A1BB3C73605B97DA /* Pods-VODPlayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VODPlayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		81D6F861307F16146DAB36828CDB5DF2 /* Pods-VODPlayer_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VODPlayer_Example-Info.plist"; sourceTree = "<group>"; };
 		87BB186C85F6C11C1B92693D06AB83F6 /* Pods-VODPlayer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VODPlayer_Example-umbrella.h"; sourceTree = "<group>"; };
-		8B0AA8DC1C79327B4369A7ACC28BB81A /* Pods-VODPlayer_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-VODPlayer_Tests"; path = Pods_VODPlayer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B0AA8DC1C79327B4369A7ACC28BB81A /* Pods_VODPlayer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VODPlayer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB9A1B3AE6521C9F41AC458B38EDD47 /* VODPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VODPlayer-dummy.m"; sourceTree = "<group>"; };
 		91164BE769DA144776663FBF46785561 /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsets.swift; path = Source/ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
 		91A53CAF547D71AEFABE49D91B4E6816 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
 		94868D98E1750E12AE4A9A7A777551DD /* VODPlayerBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayerBaseView.swift; sourceTree = "<group>"; };
 		9716AD15FADF38A93170E034F2BCE457 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
-		979486118B3E90C08386079D57962701 /* SnapKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9859EC3DFBC3EFEACCE62C17FB939DC9 /* Pods-VODPlayer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VODPlayer_Tests.modulemap"; sourceTree = "<group>"; };
 		997A39DA0227182033EF4A43FAE63FBC /* VODPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = VODPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9B38AA042A571638983BC83736D0E8ED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -464,10 +464,10 @@
 		F88BFEBD11C123862EF0305104B47684 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				31FECC8D595852F7E8E8C033FBC14BF4 /* Pods-VODPlayer_Example */,
-				8B0AA8DC1C79327B4369A7ACC28BB81A /* Pods-VODPlayer_Tests */,
-				979486118B3E90C08386079D57962701 /* SnapKit */,
-				5E99226518C4493CEF20414B163C6AC0 /* VODPlayer */,
+				31FECC8D595852F7E8E8C033FBC14BF4 /* Pods_VODPlayer_Example.framework */,
+				8B0AA8DC1C79327B4369A7ACC28BB81A /* Pods_VODPlayer_Tests.framework */,
+				979486118B3E90C08386079D57962701 /* SnapKit.framework */,
+				5E99226518C4493CEF20414B163C6AC0 /* VODPlayer.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -535,7 +535,7 @@
 			);
 			name = "Pods-VODPlayer_Example";
 			productName = Pods_VODPlayer_Example;
-			productReference = 31FECC8D595852F7E8E8C033FBC14BF4 /* Pods-VODPlayer_Example */;
+			productReference = 31FECC8D595852F7E8E8C033FBC14BF4 /* Pods_VODPlayer_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */ = {
@@ -553,7 +553,7 @@
 			);
 			name = SnapKit;
 			productName = SnapKit;
-			productReference = 979486118B3E90C08386079D57962701 /* SnapKit */;
+			productReference = 979486118B3E90C08386079D57962701 /* SnapKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		492E84D0A7256AAF7F70628981CF2A02 /* VODPlayer */ = {
@@ -572,7 +572,7 @@
 			);
 			name = VODPlayer;
 			productName = VODPlayer;
-			productReference = 5E99226518C4493CEF20414B163C6AC0 /* VODPlayer */;
+			productReference = 5E99226518C4493CEF20414B163C6AC0 /* VODPlayer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BB96200863C8DF5448A49B5295181A8D /* Pods-VODPlayer_Tests */ = {
@@ -591,7 +591,7 @@
 			);
 			name = "Pods-VODPlayer_Tests";
 			productName = Pods_VODPlayer_Tests;
-			productReference = 8B0AA8DC1C79327B4369A7ACC28BB81A /* Pods-VODPlayer_Tests */;
+			productReference = 8B0AA8DC1C79327B4369A7ACC28BB81A /* Pods_VODPlayer_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -601,7 +601,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1320;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -769,7 +769,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A1CD432F32277BB93DEAADA626ECEC5B /* SnapKit.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -782,7 +781,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SnapKit/SnapKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
 				PRODUCT_MODULE_NAME = SnapKit;
@@ -803,7 +802,6 @@
 			baseConfigurationReference = E94134B0AB00951193C0A6EE951D5CE7 /* Pods-VODPlayer_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -837,7 +835,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 50A9170B12B1F27845F367AA34888C4B /* VODPlayer.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -936,7 +933,6 @@
 			baseConfigurationReference = 0F346B0AC15A466D4389D676071B10BC /* Pods-VODPlayer_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -969,7 +965,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C21E0C93A1141A1E2EB51575500E27D /* SnapKit.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -982,7 +977,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SnapKit/SnapKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
 				PRODUCT_MODULE_NAME = SnapKit;
@@ -1001,7 +996,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2633DD881EC259FA8A8BDD05B3F6B256 /* VODPlayer.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1096,7 +1090,6 @@
 			baseConfigurationReference = B1E417FAAFF02114F366038E4958F099 /* Pods-VODPlayer_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1131,7 +1124,6 @@
 			baseConfigurationReference = 8004F9D24ED29F16A1BB3C73605B97DA /* Pods-VODPlayer_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

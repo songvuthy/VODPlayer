@@ -13,9 +13,20 @@ public let VODPlayerConf = VODPlayerManager.shared
 open class VODPlayerManager {
     public static let shared = VODPlayerManager()
     
-    open var heightTopMaskView    = 60
-    open var heightBottomMaskView = 60
-    open var btnHeightTopMaskView = 25
+    public var heightTopMaskView:CGFloat {
+        return 50
+    }
+    public var heightBottomMaskView:CGFloat {
+        return 50
+    }
+    open var positionTopMaskView:CGFloat    = 0
+    open var positionBottomMaskView:CGFloat = 0
+    
+    open var btnHeightTopMaskView:CGFloat = 25
+    open var btnPlaySize:CGFloat          = 45
+    open var btnPre10sSize:CGFloat        = 35
+    open var btnPre10sPadding:CGFloat     = 50
+
     
     /// tint color
     open var tintColor    = UIColor.white
