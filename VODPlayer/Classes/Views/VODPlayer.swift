@@ -12,11 +12,11 @@ public class VODPlayer: VODBaseView {
     // View
     fileprivate var playerControls: VODPlayerControls!
     fileprivate var playerLayer   : VODPlayerLayerView!
-    
+    fileprivate var isSliderSliding = false
     public var currentTime:  TimeInterval = 0
     
     override func setupComponents() {
-        backgroundColor =  #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1) // #333333
+        backgroundColor =  .black
         /// PlayerLayer
         playerLayer = VODPlayerLayerView()
         playerLayer.delegate = self
@@ -107,11 +107,11 @@ extension VODPlayer: VODPlayerControlViewDelegate {
                 button.tag = VODPlayerControls.ButtonType.play.rawValue
                 
             case.pre10:
-//                controlView.updateCurrentTime(btnView: controlView.pre10Button, duration: -TimeInterval(10))
+                controlView.updateCurrentTime(btnView: controlView.pre10Button, duration: -TimeInterval(10))
                 return
             case .next10:
                 return
-//                controlView.updateCurrentTime(btnView: controlView.next10Button, duration: TimeInterval(10))
+                controlView.updateCurrentTime(btnView: controlView.next10Button, duration: TimeInterval(10))
             }
         }
     }
@@ -149,7 +149,20 @@ extension VODPlayer: VODPlayerControlViewDelegate {
     }
     
     public func controlView(controlView: VODPlayerControls, slider: UISlider, onSliderEvent event: UIControl.Event) {
-        
+        switch event {
+        case.touchDown:
+            self.isSliderSliding = controlView.isSliderSliding
+        case .touchUpInside:
+            let target = controlView.totalDuration * Double(slider.value)
+            seek(target, completion: {[weak self] in
+                self?.isSliderSliding = controlView.isSliderSliding
+                if controlView.playButton.isSelected {
+                    self?.play()
+                }
+                self?.currentTime = target
+            })
+        default: break
+        }
     }
     
     
@@ -163,7 +176,8 @@ extension VODPlayer: VODPlayerLayerViewDelegate {
         case .bufferFinished:
             play()
         case .playedToTheEnd:
-            break
+            backBlock?()
+   
         default:
             break
         }
@@ -174,7 +188,7 @@ extension VODPlayer: VODPlayerLayerViewDelegate {
     }
     
     public func vodPlayer(player: VODPlayerLayerView, playTimeDidChange currentTime: TimeInterval, totalTime: TimeInterval) {
-        if player.state == .bufferFinished{
+        if !isSliderSliding && player.state == .bufferFinished{
             self.currentTime = currentTime
             playerControls.playTimeDidChange(currentTime: currentTime, totalTime: totalTime)
         }

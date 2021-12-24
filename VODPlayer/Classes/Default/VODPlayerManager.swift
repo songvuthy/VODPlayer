@@ -23,9 +23,9 @@ open class VODPlayerManager {
     open var positionBottomMaskView:CGFloat = 0
     
     open var btnHeightTopMaskView:CGFloat = 25
-    open var btnPlaySize:CGFloat          = 45
-    open var btnPre10sSize:CGFloat        = 35
-    open var btnPre10sPadding:CGFloat     = 50
+    open var btnPlaySize:CGFloat          = 50
+    open var btnPre10sSize:CGFloat        = 40
+    open var btnPre10sPadding:CGFloat     = 40
 
     
     /// tint color

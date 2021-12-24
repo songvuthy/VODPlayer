@@ -308,6 +308,20 @@ public class VODPlayerControls: VODBaseView {
             vodPlayer?.seek(currentTime + duration)
         }
     }
+    @objc func sliderTouchBegan(_ sender: UISlider)  {
+        isSliderSliding = true
+        delegate?.controlView(controlView: self, slider: sender, onSliderEvent: .touchDown)
+    }
+    @objc func sliderValueChanged(_ sender: UISlider)  {
+        let currentTime = Double(sender.value) * totalDuration
+        bottomMaskView.currentTimeLabel.text =  VODPlayerControls.formatSecondsToString(totalDuration - currentTime)
+        delegate?.controlView( controlView: self, slider: sender, onSliderEvent: .valueChanged)
+    }
+    @objc func sliderTouchEnded(_ sender: UISlider)  {
+        isSliderSliding = false
+        delegate?.controlView(controlView: self, slider: sender, onSliderEvent: .touchUpInside)
+        autoFadeOutControlViewWithAnimation()
+    }
     //    MARK: - ConfigureLayout
     override func setupComponents() {
         [mainMaskView, playButton, pre10Button, next10Button,loadingIndicator].forEach({ addSubview($0) })
@@ -376,7 +390,23 @@ public class VODPlayerControls: VODBaseView {
         // settingView
         let tapSettingView = UITapGestureRecognizer(target: self, action: #selector(onTapAction(_:)))
         topMaskView.settingView.addGestureRecognizer(tapSettingView)
-
+        
+        
+        bottomMaskView.timeSlider.addTarget(
+            self,
+            action: #selector(sliderTouchBegan(_:)),
+            for: UIControl.Event.touchDown
+        )
+        bottomMaskView.timeSlider.addTarget(
+            self,
+            action: #selector(sliderValueChanged(_:)),
+            for: UIControl.Event.valueChanged
+        )
+        bottomMaskView.timeSlider.addTarget(
+            self,
+            action: #selector(sliderTouchEnded(_:)),
+            for: [UIControl.Event.touchUpInside,UIControl.Event.touchCancel, UIControl.Event.touchUpOutside]
+        )
     }
     
     override func setupConstraint() {
