@@ -30,6 +30,7 @@ pod 'VODPlayer'
 ## Example
 
 ```swift
+// MARK: - Prapare present player
 import VODPlayer
 
    let resource = VODPlayerResource.init(
@@ -47,6 +48,8 @@ import VODPlayer
         vc.preparePlayVideo(resource: resource)
     })
 
+
+// MARK: - PlayerVC
 import VODPlayer
 
 class PlayerVC: UIViewController {
