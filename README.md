@@ -8,8 +8,18 @@
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## Features
+
+- [x] Support for horizontal and vertical play mode
+- [x] Support play online URL and local file
+- [x] Adjust brightness by slide vertical at left side of screen
+- [x] Adjust volume by slide vertical at right side of screen
 
 ## Requirements
+
+- iOS 12.0+
+- Xcode 10.0+
+- Swift 4+
 
 ## Installation
 
@@ -20,6 +30,17 @@ it, simply add the following line to your Podfile:
 pod 'VODPlayer'
 ```
 
+## Customize player
+Needs to change before the player alloc.
+
+```swift
+// enable setting the brightness by touch gesture in the player
+BMPlayerConf.enableBrightnessGestures = true
+// enable setting the volume by touch gesture in the player
+BMPlayerConf.enableVolumeGestures = true
+// enable setting the playtime by touch gesture in the player
+BMPlayerConf.enablePlaytimeGestures = true
+```
 ## Author
 
 Song Vuthy, songvuthy93@gmail.com
