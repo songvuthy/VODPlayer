@@ -217,7 +217,9 @@ extension VODPlayer: VODPlayerLayerViewDelegate {
         playerControls.playerStateDidChange(state: state)
         switch state {
         case .bufferFinished:
-            play()
+            if VODPlayerConf.shouldAutoPlay {
+                play()
+            }
         case .playedToTheEnd:
             backBlock?()
             

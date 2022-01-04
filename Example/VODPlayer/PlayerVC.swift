@@ -18,6 +18,7 @@ class PlayerVC: UIViewController {
         view.backgroundColor =  .white
         
         // Config
+        VODPlayerConf.shouldAutoPlay = false
         VODPlayerConf.btnPre10sPadding = 70
         
         // Add player on view

@@ -26,11 +26,9 @@ open class VODPlayerManager {
     open var btnPlaySize:CGFloat          = 50
     open var btnPre10sSize:CGFloat        = 40
     open var btnPre10sPadding:CGFloat     = 40
-
     open var panModalHeight: CGFloat = UIScreen.main.bounds.width * 0.7
     
     /// tint color
-    open var tintColor     = UIColor.white
     open var defaultColor  = UIColor.white
     open var activeColor   = #colorLiteral(red: 0.9960784314, green: 0.5333333333, blue: 0.01176470588, alpha: 1) // #FDB316
     open var progressColor = #colorLiteral(red: 0.9960784314, green: 0.5333333333, blue: 0.01176470588, alpha: 1) // #FDB316
@@ -38,9 +36,6 @@ open class VODPlayerManager {
     /// should auto play
     open var shouldAutoPlay = true
     open var animateDelayTimeInterval = TimeInterval(5)
-    
-    /// should show log
-    open var allowLog = false
     
     /// use gestures to set brightness, volume and play position
     open var enableBrightnessGestures  = true

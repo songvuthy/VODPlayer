@@ -223,7 +223,9 @@ public class VODPlayerControls: VODBaseView {
     private func bufferFinished (){
         if !isBufferFinishedFirstTime{
             // Hidden controls of video
-            controlViewAnimation(isShow: false)
+            if VODPlayerConf.shouldAutoPlay {
+                controlViewAnimation(isShow: false)
+            }
             // Enable slider of video duration
             bottomMaskView.enableTimeSlider()
             // Checking hide Btn ( pre10s and next10s )
