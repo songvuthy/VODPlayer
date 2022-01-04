@@ -27,13 +27,85 @@ it, simply add the following line to your Podfile:
 pod 'VODPlayer'
 ```
 
+## Example
+
+```swift
+import VODPlayer
+
+   let resource = VODPlayerResource.init(
+        movieId: 0,
+        url: URL(string: "https://dev-adc.obs.ap-southeast-3.myhuaweicloud.com/pharim-testing/test3/index.m3u8")!
+    )
+        
+    // Config
+    let vc = PlayerVC()
+    vc.modalTransitionStyle = .crossDissolve
+    vc.modalPresentationStyle = .fullScreen
+    // Start present VODPlayer
+    self.present(vc, animated: true, completion: { /// Completion present VODPlayerVC
+        // Call this func for preparePlayVideo
+        vc.preparePlayVideo(resource: resource)
+    })
+
+import VODPlayer
+
+class PlayerVC: UIViewController {
+    fileprivate var player: VODPlayer!
+    fileprivate var resource: VODPlayerResource!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor =  .white
+        
+        // Config
+        VODPlayerConf.btnPre10sPadding = 70
+        
+        // Add player on view
+        player = VODPlayer()
+        view.addSubview(player)
+        player.vc = self
+        player.backBlock = {[self] in
+            dismissVC()
+        }
+        
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        player.snp.remakeConstraints { make in
+           if UIApplication.shared.statusBarOrientation.isLandscape {
+               make.edges.equalToSuperview()
+           } else {
+               make.top.left.right.equalTo(view.safeAreaLayoutGuide)
+               make.height.equalTo((4 / 6) * UIScreen.main.bounds.width).priority(750)
+           }
+        
+        }
+    }
+    
+    
+    // MARK: - prepare play video
+
+    func preparePlayVideo(resource: VODPlayerResource) {
+        self.resource = resource
+        player.setVideo(resource: self.resource)
+    }
+    
+    private func dismissVC(){
+        player.prepareToDeinit()
+        dismiss(animated: true, completion: nil)
+        
+    }
+
+}
+
+```
+
 ## Customize player
 Needs to change before the player alloc.
 
 ```swift
-// enable setting the mirror to show on view
+// enable setting the mirror to show on header view
 VODPlayerConf.enableMirror = true
-// enable setting the option to show on view
+// enable setting the option to show on header view
 VODPlayerConf.enableOption = true
 // enable setting the brightness by touch gesture in the player
 VODPlayerConf.enableBrightnessGestures = true
