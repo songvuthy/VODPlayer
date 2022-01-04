@@ -5,9 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/VODPlayer.svg?style=flat)](https://cocoapods.org/pods/VODPlayer)
 [![Platform](https://img.shields.io/cocoapods/p/VODPlayer.svg?style=flat)](https://cocoapods.org/pods/VODPlayer)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 ## Features
 
 - [x] Support for horizontal and vertical play mode
@@ -34,12 +31,16 @@ pod 'VODPlayer'
 Needs to change before the player alloc.
 
 ```swift
+// enable setting the mirror to show on view
+VODPlayerConf.enableMirror = true
+// enable setting the option to show on view
+VODPlayerConf.enableOption = true
 // enable setting the brightness by touch gesture in the player
-BMPlayerConf.enableBrightnessGestures = true
+VODPlayerConf.enableBrightnessGestures = true
 // enable setting the volume by touch gesture in the player
-BMPlayerConf.enableVolumeGestures = true
+VODPlayerConf.enableVolumeGestures = true
 // enable setting the playtime by touch gesture in the player
-BMPlayerConf.enablePlaytimeGestures = true
+VODPlayerConf.enablePlaytimeGestures = true
 ```
 ## Author
 
