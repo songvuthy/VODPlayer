@@ -22,6 +22,7 @@ class TopMaskView: VODBaseView {
         [backView, stackView].forEach({ addSubview($0) })
         backView.addSubview(ivBack)
 
+        
     }
     
     override func setupConstraint() {
@@ -66,12 +67,14 @@ class TopMaskView: VODBaseView {
         let view = VODStackView()
         view.imageView.image = VODImageResourcePath("VOD_Icon_Download")
         view.tag = VODPlayerControls.TapActionType.download.rawValue
+        view.isHidden = true
         return view
     }()
     lazy var mirrorView: VODStackView = {
         let view = VODStackView()
         view.imageView.image = VODImageResourcePath("VOD_Icon_Mirror")
         view.tag = VODPlayerControls.TapActionType.mirror.rawValue
+        view.isHidden = true
         return view
     }()
     
@@ -79,6 +82,7 @@ class TopMaskView: VODBaseView {
         let view = VODStackView()
         view.imageView.image = VODImageResourcePath("VOD_Icon_Subtitles")
         view.tag = VODPlayerControls.TapActionType.subtitles.rawValue
+        view.isHidden = true
         return view
     }()
     
@@ -86,6 +90,8 @@ class TopMaskView: VODBaseView {
         let view = VODStackView()
         view.imageView.image = VODImageResourcePath("VOD_Icon_Options")
         view.tag = VODPlayerControls.TapActionType.setting.rawValue
+        view.vodEnableView(isEnable: VODPlayerConf.enableOption)
+        view.isHidden = true
         return view
     }()
     

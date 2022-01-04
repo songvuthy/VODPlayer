@@ -74,8 +74,6 @@ open class VODPlayerLayerView: UIView {
     fileprivate var player: AVPlayer?
     fileprivate var playerLayer = AVPlayerLayer()
     fileprivate var urlAsset: AVURLAsset?
-    
-    open var allowsExternalPlayback: Bool = false
     var _w: CGFloat = 0.0
     open var playerRate: Float = 1.0
     var state = VODPlayerState.notSetURL {
@@ -105,7 +103,7 @@ open class VODPlayerLayerView: UIView {
         player?.play()
         player?.rate = playerRate
         isPlaying = true
-
+        
     }
     open func pause() {
         player?.pause()
@@ -127,7 +125,7 @@ open class VODPlayerLayerView: UIView {
             let _w = UIView().vodIsFullScreen ? UIApplication.safeFrame.width : self.width
             self.playerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
             self.playerLayer.frame = CGRect(x: (self.width - _w )/2, y: 0, width: _w, height: self.height)
-           
+            
         case .fullScreen:
             self.playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
             self.playerLayer.frame  = self.bounds
@@ -176,7 +174,7 @@ open class VODPlayerLayerView: UIView {
     override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if let item = object as? AVPlayerItem, let keyPath = keyPath {
             if item == self.playerItem {
-
+                
                 switch keyPath {
                 case "status":
                     if item.status == .failed || player?.status == AVPlayer.Status.failed {
@@ -186,7 +184,7 @@ open class VODPlayerLayerView: UIView {
                     }
                     
                 case "loadedTimeRanges":
-            
+                    
                     if let timeInterVarl    = self.availableDuration() {
                         let duration        = item.duration
                         let totalDuration   = CMTimeGetSeconds(duration)
@@ -194,7 +192,7 @@ open class VODPlayerLayerView: UIView {
                     }
                     
                 case "playbackBufferEmpty":
-            
+                    
                     if self.playerItem!.isPlaybackBufferEmpty {
                         self.state = .buffering
                     }
@@ -202,7 +200,7 @@ open class VODPlayerLayerView: UIView {
                     if item.isPlaybackBufferEmpty {
                         if state != .bufferFinished {
                             self.state = .bufferFinished
-                   
+                            
                         }
                     }
                 default:
@@ -216,7 +214,7 @@ open class VODPlayerLayerView: UIView {
     
     fileprivate func availableDuration() -> TimeInterval? {
         if let loadedTimeRanges = player?.currentItem?.loadedTimeRanges,
-            let first = loadedTimeRanges.first {
+           let first = loadedTimeRanges.first {
             let timeRange = first.timeRangeValue
             let startSeconds = CMTimeGetSeconds(timeRange.start)
             let durationSecound = CMTimeGetSeconds(timeRange.duration)
@@ -270,8 +268,8 @@ open class VODPlayerLayerView: UIView {
         if state != .playedToTheEnd {
             if let playerItem = playerItem {
                 delegate?.vodPlayer(player: self,
-                                   playTimeDidChange: CMTimeGetSeconds(playerItem.duration),
-                                   totalTime: CMTimeGetSeconds(playerItem.duration))
+                                    playTimeDidChange: CMTimeGetSeconds(playerItem.duration),
+                                    totalTime: CMTimeGetSeconds(playerItem.duration))
             }
             
             self.state = .playedToTheEnd
@@ -280,11 +278,82 @@ open class VODPlayerLayerView: UIView {
         }
     }
     
+    private func fetchMediaPlaylist() {
+        /// MediaPlaylist
+        var mediaPlaylists: [VODPlayList] = []
+        let builder = ManifestBuilder()
+        if let url = urlAsset?.url {
+            let urlStr = url.absoluteString
+            let delimiter = "?"
+            let token = urlStr.components(separatedBy: delimiter)
+            let first = token[0]
+            if first.prefix(5) != "https" || first.suffix(4) == ".mp4"{
+                return
+            }
+            if first.suffix(5) == ".m3u8"{
+                //
+                let lastIndex = first.components(separatedBy: "/").count - 1
+                let lastPath  = first.components(separatedBy: "/")[lastIndex]
+                guard let path = try? first.replace(lastPath, replacement: "") else { return }
+                let _ = builder.parseMasterPlaylistFromURL(url) { (mediaPlaylist) in
+                    /// get media playLists
+                    if let resolution = mediaPlaylist.resolution, let subPath =  mediaPlaylist.path{
+                        let subURL: String = subPath.prefix(5) == "https" ? subPath : path + subPath
+                        let mediaPlaylist = VODPlayList.init(
+                            title:"\(resolution.vodGetQuality)p",
+                            quality: resolution.vodGetQuality,
+                            resolution: resolution,
+                            banWidth: mediaPlaylist.bandwidth,
+                            subURL: subURL,
+                            checkmark: false
+                        )
+                        /// remove data duplicates
+                        if let _ = mediaPlaylists.firstIndex(where: {$0.resolution == mediaPlaylist.resolution}) { }else{
+                            mediaPlaylists.append(mediaPlaylist)
+                        }
+                    }
+                }
+                // Prepare append playPlayList by DESC
+                if VODDataLocal.playPlayList.count == 0{
+                    mediaPlaylists.sort { $0.banWidth > $1.banWidth }
+                    // Insert auto quality to mediaPlaylists
+                    mediaPlaylists.insert(VODPlayList.init(title: "Auto",
+                                                           quality: "",
+                                                           resolution: "",
+                                                           banWidth: 0,
+                                                           subURL: urlStr,
+                                                           checkmark: true), at: 0)
+                    // Append mediaPlaylists to VODDataLocal
+                    VODDataLocal.playPlayList.append(contentsOf: mediaPlaylists)
+                }
+            }
+        }
+        
+    }
     
+    open func changeQuality(quality: VODPlayList, currentTime: TimeInterval = 0) {
+        
+        guard let url = URL(string: quality.subURL) else { return }
+        
+        let asset = AVURLAsset(url: url)
+        
+        urlAsset = asset
+        playerItem = AVPlayerItem(asset: urlAsset!)
+        player?.replaceCurrentItem(with: playerItem)
+        let draggedTime = CMTime(value: Int64(currentTime), timescale: 1)
+        self.player!.seek(to: draggedTime, toleranceBefore: CMTime.zero, toleranceAfter: CMTime.zero, completionHandler: {[self] (_) in
+            if isPlaying {
+                play()
+            }
+        })
+        
+    }
     
     // MARK: - 设置视频URL
     fileprivate func onSetVideoAsset() {
         configPlayer()
+        fetchMediaPlaylist()
+        
     }
     fileprivate func onPlayerItemChange() {
         if lastPlayerItem == playerItem {
@@ -310,7 +379,7 @@ open class VODPlayerLayerView: UIView {
         playerItem = AVPlayerItem(asset: urlAsset!)
         playerItem?.preferredPeakBitRate = 0
         player     = AVPlayer(playerItem: playerItem)
-        player?.allowsExternalPlayback = allowsExternalPlayback
+        player?.allowsExternalPlayback = true
         preparePlayerLayer()
         setNeedsLayout()
         layoutIfNeeded()
@@ -321,7 +390,7 @@ open class VODPlayerLayerView: UIView {
     }
     
     fileprivate func preparePlayerLayer() {
-
+        
         playerLayer.removeFromSuperlayer()
         playerLayer = AVPlayerLayer(player: player)
         playerLayer.videoGravity = videoGravity
@@ -336,13 +405,13 @@ open class VODPlayerLayerView: UIView {
         }
         return true
     }
-
+    
     @objc fileprivate func disconnectPlayerLayer() {
         //Picture in Picture is isPictureInPictureSupported
         if !isPictureInPictureSupported {
             pause()
         }
-       
+        
     }
     
     /** Handle screen record */

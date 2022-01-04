@@ -7,180 +7,232 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0760821B3C6FF3FECDEEC263628C7354 /* VODPlayerExstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F74933567741798E19A1FE9DCE40C0 /* VODPlayerExstension.swift */; };
+		03B87115B1E74E2C949874C4ADFE8AFF /* PanModal.h in Headers */ = {isa = PBXBuildFile; fileRef = 35EC1C79375B26621EDAC5A235A6D654 /* PanModal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04E93848549273F253F063A26F3E176A /* VODPlayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3259CEDEE2A197F01D4B78D08B0E42 /* VODPlayListView.swift */; };
+		090062B8713C717BF1D8F1539C6796F1 /* BaseCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E4C42330F74999AA3CFB1F83874359 /* BaseCollectionViewFlowLayout.swift */; };
+		0AB2418A06B760F581BE16F448CD1682 /* PanModalPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3AC5DA95AF175F329EC71CA085BAF /* PanModalPresentationDelegate.swift */; };
+		0B00FF560435F8A597D1AD9416189FFE /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28595DAAB6E853D50812D08D7ABE85 /* DimmedView.swift */; };
 		0C28F53F89AD0DAEF8B8A1A65D036DE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D27F53483E7691E74F88B87CD0D33A /* Foundation.framework */; };
-		0DB67A612C2498638C535BA4FF3FC539 /* VODPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCB04E46FB24823EC6BE08F601F96C /* VODPlayer.swift */; };
+		0F950FAFFD1A48911F72E010481040A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D27F53483E7691E74F88B87CD0D33A /* Foundation.framework */; };
 		144DA93A55A598F5197F10C729FBDD69 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9341666EAC154422A032092A7DC2D7 /* UILayoutSupport+Extensions.swift */; };
 		17BE0F4E51B0FB968125F1A520607FD8 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB9BB47A2175181386A432C07253AE /* ConstraintMultiplierTarget.swift */; };
 		1890C8BF1C541DE39DCC2E0DBA35374A /* Pods-VODPlayer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B97AE7436ABCCCEF4B27B19BDE4840D /* Pods-VODPlayer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E9EEA756F2774D73347F1660EEFE3E9 /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9055CEA7890517265589BD23D73A49 /* ConstraintView+Extensions.swift */; };
+		23CCA120539F2C7B8E85D4FF633717FB /* BottomMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C4747F30EA6C43CB3ED58F39BFA89A /* BottomMaskView.swift */; };
 		274DF0E2BF04F6F4F9F1E70CF513A4F2 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A46A8054577838D49C60142EB88B13 /* ConstraintLayoutSupportDSL.swift */; };
+		28566D5D5C7E62ACA40A31D850144F85 /* PanModalPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4370625DD9163D52E222C19FA6E853 /* PanModalPresentationAnimator.swift */; };
+		29CB75DFCD497DBFC0EE0BBF8536F954 /* VODStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD4B70E3DF1908C6E76C2027563BA5B /* VODStackView.swift */; };
+		2E7D74D28E00A4195D374012488C08CF /* UIViewController+PanModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01929713DCFF444A47B0D1AF34E1C5D /* UIViewController+PanModalPresenter.swift */; };
+		35C8ACFB0885DF3225358453015D2115 /* MasterPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9EB356035836609734B3446F0F2A95 /* MasterPlaylist.swift */; };
 		3B60C02F6E42FD06B128473E00A94224 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D705690D879064ED84970813189D8D4 /* ConstraintLayoutSupport.swift */; };
 		3CD5FAFC746A76D73C3F501734199DFF /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E066869A95E00B949CBA4D2284C35F /* Typealiases.swift */; };
 		3DEDFA52B3A196F6D3E1F0937617628A /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF299D2EEB87E7DD02630E87B96224 /* ConstraintLayoutGuide+Extensions.swift */; };
 		43863B6D6A0E47B6648BB7B469736EDD /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44C5B72775F6AF0891BF331F32FE10D /* LayoutConstraint.swift */; };
 		4CA13A0527BC57DE2C54A0F3B5ED8652 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464C01543F3BCEDEE51ABAA696513D0B /* LayoutConstraintItem.swift */; };
 		51A4A1046676D304410544EB56732A49 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50380F281EC3EE769C85035CCEA77226 /* Constraint.swift */; };
-		536B9867DD4D210D5BC5A0F24A06527B /* VODPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58901E9C3674A27F8A38CDD7A9051E62 /* VODPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53E949668C78741B33BF372E503F2BF7 /* PanModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398447272D64EA9648F1926C1A78ADCA /* PanModalPresentationController.swift */; };
+		5641F61B7620C1DE319EA095A7878E80 /* VODQualityVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAC8E2FC2C07AAE77BE84F26991A2A0 /* VODQualityVideoVC.swift */; };
 		5E8BA529DFB4529006967624044FEC1C /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56006AA49A060CA2830F32CD6F394823 /* ConstraintViewDSL.swift */; };
+		623122A874F44328E68BF9C1D4FDFF80 /* PanModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B12D33FB40EAD772456A33FD3F6B31 /* PanModalPresenter.swift */; };
 		62F299B4704A7C95FB5866C6CDE2E2FD /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B200BD964F52F6693D4168248B8645 /* ConstraintOffsetTarget.swift */; };
-		6EC85F54D225CE196C8314DEE1DBA451 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9DAEBAF7204BA39B34CF7E0E8FCFD7 /* AVFoundation.framework */; };
+		6829838CB27902D15900B48E5E096D74 /* VODPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8972D82D11ED2D56CA02487BD3E54 /* VODPlayer.swift */; };
+		6DD94A892E12BF57DF640ABDF3D0853C /* VODPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE80D8FB184C16C9F052802E7BC035E /* VODPlayer-dummy.m */; };
+		7009AB030F21E476FC8403BCA28A3788 /* PanModelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4C3C1F55882119D53B948D58365B9 /* PanModelHeaderView.swift */; };
 		7580FAAB1BDA52F5A969E5571D1A5973 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F460233F2A555D41511B6CCA66A124 /* ConstraintAttributes.swift */; };
 		7764AA5F6BBFC6ECE43959923DD007D3 /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D358AA1606C7B2CDC8555485807E9E /* ConstraintDirectionalInsetTarget.swift */; };
-		7CBAD943F5EC39258638F4668E80BE42 /* VODPlayerResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF1ECDEE08B78ED5353460DBDDFD0F3 /* VODPlayerResource.swift */; };
+		7963DEF6C44F24354039974B38FC4791 /* VODPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 69D407C27AE9D29A55A507EB26A3D2B1 /* VODPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F8F71D2C17DBC3251FE6FDAE26321F3 /* Pod_Asset_VODPlayer.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66ADDBC9CCCBE22D0E5456D7B593D5D2 /* Pod_Asset_VODPlayer.xcassets */; };
+		81B9C933E42B217198C479133DAEFF2E /* VODPlayerResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFDFE5A279FF9F29A09FF7352866115 /* VODPlayerResource.swift */; };
 		825062025906CE93C5D124E1FD9A811E /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43F10DE451FED17810D9B5C237324A5 /* ConstraintMakerExtendable.swift */; };
 		8449EB1DFD43E222D687D5A8D2088D2D /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BE9F3D55FDB29EF516F6D6B1B6BCA /* ConstraintLayoutGuideDSL.swift */; };
-		855CE4D352A8487BDBA010F38DAF279D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3447B6A50AA430A059E8197DFCDA88F /* UIKit.framework */; };
 		8C6546C1EF4F153DF3795CC6FE189E5B /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549471CD1FE3A1E1865DD172864918D3 /* ConstraintInsets.swift */; };
+		8D5AEC6D2ABB9EAACC162765C79F4DA9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9DAEBAF7204BA39B34CF7E0E8FCFD7 /* AVFoundation.framework */; };
 		8FD9CD608C4EAAFDE6AC7B8B9EF0FF5E /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1D9F6F4E2364DFAF158E04AF5D5EAA /* ConstraintDescription.swift */; };
 		90FD5AE525E138A473723FD79AF73273 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE00ECC24C5CC6DC938204FF42AD0E5 /* ConstraintDSL.swift */; };
 		957D6C48802BD7C3A8D2F35EA22AB942 /* Pods-VODPlayer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D293F10B2FFE9BB9B1FBB7AE91A0BE /* Pods-VODPlayer_Example-dummy.m */; };
 		968B4874A9F12D67C8B901136C9C8157 /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E13B89FFD81AACB7530769CA05EEA26B /* SnapKit-dummy.m */; };
+		9EE32D27F2E0011A9519CB21ACB8FB81 /* ManifestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526C808C1754D436A1EE8E73FB0CD1C /* ManifestBuilder.swift */; };
 		A0F754C88A64972A40A9008B0AD52109 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91164BE769DA144776663FBF46785561 /* ConstraintDirectionalInsets.swift */; };
 		A4467357581E8345DD348683CC4111AF /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0116B84A6773B75FCBFCB479E740F0F3 /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A53D3AF15CE8D348306EF11619C5D166 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C3B0B200350EAC8F42EF635FF31BD1 /* ConstraintMakerEditable.swift */; };
+		A8685A7216290490E21CDFD09C362797 /* PanModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF66250EE5344C10F2DDDF4A5B66C30 /* PanModalAnimator.swift */; };
 		B257E70A955FF50F357137E7BA0B533E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D27F53483E7691E74F88B87CD0D33A /* Foundation.framework */; };
 		B543FD108C1C6AF6129CB4991553218B /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250E41DBB680A3A2ECDDD2210311B230 /* ConstraintConfig.swift */; };
 		BD333CDBCF5D2FD55920336FC271DF33 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474AFC560A8B414B467174737DBC891A /* ConstraintItem.swift */; };
-		BDC76F2BD7715F1A6C053772CDEAE9FC /* VODStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AAE18B599F1BBE99A752C561F47EEF /* VODStackView.swift */; };
 		BEBF920FEB959B46A76BAADF22E5CD15 /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EC377264B25FB0E67D150E37E87CD /* ConstraintInsetTarget.swift */; };
-		C4957965F0F0E708D6992BA0ED62FEC8 /* VODPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9A1B3AE6521C9F41AC458B38EDD47 /* VODPlayer-dummy.m */; };
+		C56254659133FD8B00095A314547EA09 /* PanModalHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56E15D3A09557B11AE5F49C52A54907 /* PanModalHeight.swift */; };
 		C61D3BC32A28A405C934C00039AD2583 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D990E0FED5B41C1F13AC6B08208A99B /* ConstraintConstantTarget.swift */; };
 		CB194156C900B767B0160AF72EDF354D /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141BC33167429B9926FB24A17F01568C /* ConstraintMaker.swift */; };
 		CB8E4BF0D710970BE2CB4C87ED1043E4 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FB64349F5678CE1709979CF0DD952 /* ConstraintMakerRelatable.swift */; };
 		CCA22C9F421C9E8C13009947816D8C82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D27F53483E7691E74F88B87CD0D33A /* Foundation.framework */; };
-		CD2863611C0948D854C5100B854A4CF6 /* TopMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F8F15A81B01D4E61FAF41A5D95A7B2 /* TopMaskView.swift */; };
+		D015B354648A7D60C5C06A9370EDFC53 /* PanModalPresentable+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62D25C00C54DCD7C0AFF27CCC2F4AE /* PanModalPresentable+Defaults.swift */; };
 		D03393FA1DEE4DFC6996633E5B7A8965 /* Pods-VODPlayer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87BB186C85F6C11C1B92693D06AB83F6 /* Pods-VODPlayer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D13D417B236E736EEAE7217B5CE3EC5C /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D02329E74D733C03BF6BAE1F564481 /* ConstraintMakerFinalizable.swift */; };
+		D1A0616DFA167FE301FD113F735E22CF /* PanModalPresentable+LayoutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56EAF07BF84140A0A67C17D5002209 /* PanModalPresentable+LayoutHelpers.swift */; };
 		D2A17825A893ACEC9C0C9FE0FE034D19 /* Pods-VODPlayer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B900D95C0A9DD5656B7A8E3DC45A1402 /* Pods-VODPlayer_Tests-dummy.m */; };
+		D415521EDDBD75817E11CC79CC8CFACA /* VODPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79930C7EB33773BB5136B5956A185F30 /* VODPlayerManager.swift */; };
 		D59C2826AD288ECFF576B2AFA312716C /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25479F58B67AA43E092C7B156C1B5C1B /* ConstraintRelation.swift */; };
-		D96B83B1276897EC000F6D5A /* BottomMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96B83B0276897EC000F6D5A /* BottomMaskView.swift */; };
-		D96B83B427689D4F000F6D5A /* VODPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96B83B327689D4F000F6D5A /* VODPlayerManager.swift */; };
-		DC68078DD6DE7B684E79761909EBCD46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D27F53483E7691E74F88B87CD0D33A /* Foundation.framework */; };
+		D992FBA62782D722006F0E9C /* AirPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D992FBA52782D722006F0E9C /* AirPlay.swift */; };
+		D992FBA82782DA0F006F0E9C /* AirPlayBackgrounView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D992FBA72782DA0F006F0E9C /* AirPlayBackgrounView.swift */; };
+		D992FBAA2782DBC2006F0E9C /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D992FBA92782DBC2006F0E9C /* Connectivity.swift */; };
+		D992FBAC2782ED34006F0E9C /* VODSelectSubtitleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D992FBAB2782ED34006F0E9C /* VODSelectSubtitleVC.swift */; };
+		DF1233FAC8BFC7FA18BE6BAB04266F89 /* VODPlayerExstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B06032803377AEEDA5A4422909479FF /* VODPlayerExstension.swift */; };
 		E36244E8BF4AC941E82DAF16DDF4BBC2 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716AD15FADF38A93170E034F2BCE457 /* ConstraintPriorityTarget.swift */; };
-		E3FCB6B54B9E3C82EAF944CC5B97020C /* VODPlayerControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFDBDE37B652ED2B324661A60A9B5A1 /* VODPlayerControls.swift */; };
-		E5898F2340C3D0D660E29F46E5299F19 /* Pod_Asset_VODPlayer.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BD19C4DD8E1C776E31BD71A3CF8EE8A /* Pod_Asset_VODPlayer.xcassets */; };
 		E8EAADACF3BAE33BDECBC7214EAE9CD2 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2975CA5A0D26BC84F3EE9912FEBDA795 /* ConstraintRelatableTarget.swift */; };
+		EA467363FF2FBA3CA745D128F0EFAD29 /* VODBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA88054FB31B44411C41EB8D12D30AB /* VODBaseView.swift */; };
+		ED09CE222986DB55D850DCDDA5BFF606 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3447B6A50AA430A059E8197DFCDA88F /* UIKit.framework */; };
 		EE6C364198A763EBBF49237035D86439 /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5188AE61F0E667CD9E7ED28CDD61C /* ConstraintLayoutGuide.swift */; };
-		EF81751E1EB3D740D7733F8FCD2EF986 /* VODPlayerBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94868D98E1750E12AE4A9A7A777551DD /* VODPlayerBaseView.swift */; };
+		F014C0B16951FC5D12A0DFC4D00D3BF5 /* PanContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF04D8501A5127DB74FDB8A47AEA8C15 /* PanContainerView.swift */; };
+		F0BBF269801C38AE0AEDD2CEC60A00F3 /* VODPlayerControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A090B99C385C66F13FC2AD82479EB39B /* VODPlayerControls.swift */; };
 		F10586462FB54CEA169A1A7A469A926D /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038D2FAA2F6B073D1B64B8635F4E3E6 /* Debugging.swift */; };
+		F23109243D24AFEDEBA14C6B67DE940A /* PanModalPresentable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82E099CE32388935068187CFA5FA4A /* PanModalPresentable+UIViewController.swift */; };
 		F24D06C23DAB2F52A30C886A7A8177C7 /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E99894F75F00A281BE6A32FBDE495 /* ConstraintView.swift */; };
 		F2C817C166B2DE613222C41015A586C9 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A53CAF547D71AEFABE49D91B4E6816 /* ConstraintMakerPriortizable.swift */; };
 		F343BA4E457FFDB0165492AECAEF0BCC /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD95F32F2E57D6B9100B77B93F013C /* ConstraintPriority.swift */; };
-		F34A61D8C7F7675FEFE78AC8931FDF29 /* VODPlayerLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9285C94FF524983B569B3F2E20985E /* VODPlayerLayerView.swift */; };
+		F7E15C1BDB9AD6EABE08B9170DA732CE /* VODBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC5D5814B4A690A1995C5ED2F6EE474 /* VODBaseVC.swift */; };
+		FC0BC60BB0A43ADD39E2E4261CAA2EC8 /* PanModalPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CFFBA9034FB3CF1A7FBC7AEEEDDC40 /* PanModalPresentable.swift */; };
+		FC7C8B7AC748E911CB7CDB23A0A77FCA /* VODPlayerLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19BA46E9213C0AFFA37DB0AE023FA7E /* VODPlayerLayerView.swift */; };
+		FE04848552BD5AE2242DAF513B27BC09 /* VODPlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8019BBC574E6423EF4C61E5143E54 /* VODPlayList.swift */; };
+		FF0FE8A5433C8ECD69F0B245E1DD8498 /* TopMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B11690FBFFB8ABDB75E62E2290AC3 /* TopMaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1F37E9914A64C7FD0EC5C63AC2AC7C7D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 12FA35C47FB944CA6CD8BF71BD2262E7;
-			remoteInfo = "Pods-VODPlayer_Example";
-		};
-		20217BD8EE4AB45C47065F0FB3A972FB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
-			remoteInfo = SnapKit;
-		};
-		455E5A74749DACF7214A9BC41CCB0DE2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
-			remoteInfo = SnapKit;
-		};
-		BBD3A742A2AE49E5ABABC9FFD2BDFC74 /* PBXContainerItemProxy */ = {
+		5A29F8C64BF7A9B7E5663CB9B380C0E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 492E84D0A7256AAF7F70628981CF2A02;
 			remoteInfo = VODPlayer;
 		};
+		6FC0287FD1F245620A38393988162CBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12FA35C47FB944CA6CD8BF71BD2262E7;
+			remoteInfo = "Pods-VODPlayer_Example";
+		};
+		983676F6A0EBE01F5D380F5DEFE0B5F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
+			remoteInfo = SnapKit;
+		};
+		D8B1B0CFF86D481F97EA41EFCF94B330 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
+			remoteInfo = SnapKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0116B84A6773B75FCBFCB479E740F0F3 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
 		09BF299D2EEB87E7DD02630E87B96224 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
+		0B06032803377AEEDA5A4422909479FF /* VODPlayerExstension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayerExstension.swift; sourceTree = "<group>"; };
+		0BA88054FB31B44411C41EB8D12D30AB /* VODBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODBaseView.swift; sourceTree = "<group>"; };
+		0C55F09CBC094A54A3CC935117178D04 /* VODPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = VODPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0EF66250EE5344C10F2DDDF4A5B66C30 /* PanModalAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PanModalAnimator.swift; sourceTree = "<group>"; };
 		0F346B0AC15A466D4389D676071B10BC /* Pods-VODPlayer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VODPlayer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		11D02329E74D733C03BF6BAE1F564481 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
 		13F460233F2A555D41511B6CCA66A124 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
 		141BC33167429B9926FB24A17F01568C /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
+		1A659A85AF8624BFF77CF03E31DCBA9E /* VODPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VODPlayer-prefix.pch"; sourceTree = "<group>"; };
 		1F9DAEBAF7204BA39B34CF7E0E8FCFD7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		2485AD92219DE85DFA4F487D69BBA562 /* VODPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VODPlayer-prefix.pch"; sourceTree = "<group>"; };
+		24B12D33FB40EAD772456A33FD3F6B31 /* PanModalPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PanModalPresenter.swift; sourceTree = "<group>"; };
 		250E41DBB680A3A2ECDDD2210311B230 /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
 		25479F58B67AA43E092C7B156C1B5C1B /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
 		25D27F53483E7691E74F88B87CD0D33A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		2633DD881EC259FA8A8BDD05B3F6B256 /* VODPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VODPlayer.release.xcconfig; sourceTree = "<group>"; };
-		27AAE18B599F1BBE99A752C561F47EEF /* VODStackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODStackView.swift; sourceTree = "<group>"; };
+		26F9E4D5202B8C511ED58E4AE4E24867 /* VODPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VODPlayer.debug.xcconfig; sourceTree = "<group>"; };
 		2975CA5A0D26BC84F3EE9912FEBDA795 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
-		31B9C6AB5DD36FB06B80159B3081757A /* VODPlayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VODPlayer-Info.plist"; sourceTree = "<group>"; };
+		30E3AC5DA95AF175F329EC71CA085BAF /* PanModalPresentationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PanModalPresentationDelegate.swift; sourceTree = "<group>"; };
 		31FECC8D595852F7E8E8C033FBC14BF4 /* Pods_VODPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VODPlayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C4747F30EA6C43CB3ED58F39BFA89A /* BottomMaskView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BottomMaskView.swift; sourceTree = "<group>"; };
+		35EC1C79375B26621EDAC5A235A6D654 /* PanModal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PanModal.h; sourceTree = "<group>"; };
 		391A6F8B42D2CD885F8F3C4CE6859439 /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
+		398447272D64EA9648F1926C1A78ADCA /* PanModalPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PanModalPresentationController.swift; sourceTree = "<group>"; };
+		3986EA4F20F3A3A02ADB1D5E51DA928A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3CD4B70E3DF1908C6E76C2027563BA5B /* VODStackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODStackView.swift; sourceTree = "<group>"; };
 		3D705690D879064ED84970813189D8D4 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
-		3DF1ECDEE08B78ED5353460DBDDFD0F3 /* VODPlayerResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayerResource.swift; sourceTree = "<group>"; };
+		43C8972D82D11ED2D56CA02487BD3E54 /* VODPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayer.swift; sourceTree = "<group>"; };
+		4526C808C1754D436A1EE8E73FB0CD1C /* ManifestBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ManifestBuilder.swift; sourceTree = "<group>"; };
 		464C01543F3BCEDEE51ABAA696513D0B /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		474AFC560A8B414B467174737DBC891A /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
 		47B200BD964F52F6693D4168248B8645 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
-		4E0EEF4DBBEA7D373614A757DE7856D0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4A56EAF07BF84140A0A67C17D5002209 /* PanModalPresentable+LayoutHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "PanModalPresentable+LayoutHelpers.swift"; sourceTree = "<group>"; };
+		4E9EB356035836609734B3446F0F2A95 /* MasterPlaylist.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MasterPlaylist.swift; sourceTree = "<group>"; };
 		50380F281EC3EE769C85035CCEA77226 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
-		50A9170B12B1F27845F367AA34888C4B /* VODPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VODPlayer.debug.xcconfig; sourceTree = "<group>"; };
+		52DF1932772A47CFB2FBBE14A4816489 /* VODPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VODPlayer.modulemap; sourceTree = "<group>"; };
 		549471CD1FE3A1E1865DD172864918D3 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
-		54CCB04E46FB24823EC6BE08F601F96C /* VODPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayer.swift; sourceTree = "<group>"; };
 		56006AA49A060CA2830F32CD6F394823 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
-		58901E9C3674A27F8A38CDD7A9051E62 /* VODPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VODPlayer-umbrella.h"; sourceTree = "<group>"; };
+		5B28595DAAB6E853D50812D08D7ABE85 /* DimmedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DimmedView.swift; sourceTree = "<group>"; };
+		5B62D25C00C54DCD7C0AFF27CCC2F4AE /* PanModalPresentable+Defaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "PanModalPresentable+Defaults.swift"; sourceTree = "<group>"; };
 		5C00AA425719E60DF920786A42687636 /* Pods-VODPlayer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VODPlayer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5E99226518C4493CEF20414B163C6AC0 /* VODPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VODPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66ADDBC9CCCBE22D0E5456D7B593D5D2 /* Pod_Asset_VODPlayer.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Pod_Asset_VODPlayer.xcassets; path = VODPlayer/Assets/Pod_Asset_VODPlayer.xcassets; sourceTree = "<group>"; };
 		66C5188AE61F0E667CD9E7ED28CDD61C /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
+		68E4C42330F74999AA3CFB1F83874359 /* BaseCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		69D407C27AE9D29A55A507EB26A3D2B1 /* VODPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VODPlayer-umbrella.h"; sourceTree = "<group>"; };
 		6A9341666EAC154422A032092A7DC2D7 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
+		6AE80D8FB184C16C9F052802E7BC035E /* VODPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VODPlayer-dummy.m"; sourceTree = "<group>"; };
 		6B97AE7436ABCCCEF4B27B19BDE4840D /* Pods-VODPlayer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VODPlayer_Tests-umbrella.h"; sourceTree = "<group>"; };
 		6D990E0FED5B41C1F13AC6B08208A99B /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
+		6E4370625DD9163D52E222C19FA6E853 /* PanModalPresentationAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PanModalPresentationAnimator.swift; sourceTree = "<group>"; };
+		70CFFBA9034FB3CF1A7FBC7AEEEDDC40 /* PanModalPresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PanModalPresentable.swift; sourceTree = "<group>"; };
 		724FB64349F5678CE1709979CF0DD952 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
+		751B11690FBFFB8ABDB75E62E2290AC3 /* TopMaskView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopMaskView.swift; sourceTree = "<group>"; };
 		7889131C1139F96BBDA94CEE2E694763 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
+		79930C7EB33773BB5136B5956A185F30 /* VODPlayerManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayerManager.swift; sourceTree = "<group>"; };
 		7AE00ECC24C5CC6DC938204FF42AD0E5 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
 		7C21E0C93A1141A1E2EB51575500E27D /* SnapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.debug.xcconfig; sourceTree = "<group>"; };
 		7C2EC377264B25FB0E67D150E37E87CD /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
+		7E3259CEDEE2A197F01D4B78D08B0E42 /* VODPlayListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayListView.swift; sourceTree = "<group>"; };
 		8004F9D24ED29F16A1BB3C73605B97DA /* Pods-VODPlayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VODPlayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		812149CC211CCCC2712C23F4E19032F4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		81D6F861307F16146DAB36828CDB5DF2 /* Pods-VODPlayer_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VODPlayer_Example-Info.plist"; sourceTree = "<group>"; };
 		87BB186C85F6C11C1B92693D06AB83F6 /* Pods-VODPlayer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VODPlayer_Example-umbrella.h"; sourceTree = "<group>"; };
 		8B0AA8DC1C79327B4369A7ACC28BB81A /* Pods_VODPlayer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VODPlayer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EB9A1B3AE6521C9F41AC458B38EDD47 /* VODPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VODPlayer-dummy.m"; sourceTree = "<group>"; };
+		8B82E099CE32388935068187CFA5FA4A /* PanModalPresentable+UIViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "PanModalPresentable+UIViewController.swift"; sourceTree = "<group>"; };
+		90EE500698D3A4ABF7E626CDF7D88BAE /* VODPlayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VODPlayer-Info.plist"; sourceTree = "<group>"; };
 		91164BE769DA144776663FBF46785561 /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsets.swift; path = Source/ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
 		91A53CAF547D71AEFABE49D91B4E6816 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
-		94868D98E1750E12AE4A9A7A777551DD /* VODPlayerBaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayerBaseView.swift; sourceTree = "<group>"; };
 		9716AD15FADF38A93170E034F2BCE457 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
 		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9859EC3DFBC3EFEACCE62C17FB939DC9 /* Pods-VODPlayer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VODPlayer_Tests.modulemap"; sourceTree = "<group>"; };
-		997A39DA0227182033EF4A43FAE63FBC /* VODPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = VODPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9B38AA042A571638983BC83736D0E8ED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		9BD19C4DD8E1C776E31BD71A3CF8EE8A /* Pod_Asset_VODPlayer.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Pod_Asset_VODPlayer.xcassets; path = VODPlayer/Assets/Pod_Asset_VODPlayer.xcassets; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FC5D5814B4A690A1995C5ED2F6EE474 /* VODBaseVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODBaseVC.swift; sourceTree = "<group>"; };
+		A01929713DCFF444A47B0D1AF34E1C5D /* UIViewController+PanModalPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+PanModalPresenter.swift"; sourceTree = "<group>"; };
+		A090B99C385C66F13FC2AD82479EB39B /* VODPlayerControls.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayerControls.swift; sourceTree = "<group>"; };
 		A1CD432F32277BB93DEAADA626ECEC5B /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
 		A51E99894F75F00A281BE6A32FBDE495 /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
-		A5F8F15A81B01D4E61FAF41A5D95A7B2 /* TopMaskView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TopMaskView.swift; sourceTree = "<group>"; };
+		A56E15D3A09557B11AE5F49C52A54907 /* PanModalHeight.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PanModalHeight.swift; sourceTree = "<group>"; };
 		A7D358AA1606C7B2CDC8555485807E9E /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Source/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
-		ACFDBDE37B652ED2B324661A60A9B5A1 /* VODPlayerControls.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayerControls.swift; sourceTree = "<group>"; };
 		AE5FEFBF33B68BC45A4F3D6C304995BE /* Pods-VODPlayer_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VODPlayer_Tests-Info.plist"; sourceTree = "<group>"; };
+		AFC8019BBC574E6423EF4C61E5143E54 /* VODPlayList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayList.swift; sourceTree = "<group>"; };
 		B0E245E5172BAD192E803558510A22BA /* Pods-VODPlayer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VODPlayer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		B1E417FAAFF02114F366038E4958F099 /* Pods-VODPlayer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VODPlayer_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B6F74933567741798E19A1FE9DCE40C0 /* VODPlayerExstension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayerExstension.swift; sourceTree = "<group>"; };
+		B6B4C3C1F55882119D53B948D58365B9 /* PanModelHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PanModelHeaderView.swift; sourceTree = "<group>"; };
 		B900D95C0A9DD5656B7A8E3DC45A1402 /* Pods-VODPlayer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VODPlayer_Tests-dummy.m"; sourceTree = "<group>"; };
 		BA9DA923F07A073AFAAB4BA43C63BF81 /* Pods-VODPlayer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VODPlayer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BBAC8E2FC2C07AAE77BE84F26991A2A0 /* VODQualityVideoVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODQualityVideoVC.swift; sourceTree = "<group>"; };
 		BE0BE9F3D55FDB29EF516F6D6B1B6BCA /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
+		C19BA46E9213C0AFFA37DB0AE023FA7E /* VODPlayerLayerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayerLayerView.swift; sourceTree = "<group>"; };
 		C4A46A8054577838D49C60142EB88B13 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		C73945ABD431E07C4B389F35F0D1EB79 /* Pods-VODPlayer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VODPlayer_Example.modulemap"; sourceTree = "<group>"; };
 		CB1D9F6F4E2364DFAF158E04AF5D5EAA /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
+		CFC4DF5557C9C188B497056EA7F4B6CC /* VODPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VODPlayer.release.xcconfig; sourceTree = "<group>"; };
 		D038D2FAA2F6B073D1B64B8635F4E3E6 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
 		D07760F27267B5D0215943D132602311 /* Pods-VODPlayer_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VODPlayer_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D4D293F10B2FFE9BB9B1FBB7AE91A0BE /* Pods-VODPlayer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VODPlayer_Example-dummy.m"; sourceTree = "<group>"; };
 		D4E066869A95E00B949CBA4D2284C35F /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
 		D4F0B0B3F3EC4DB0A72541FB649B9F9A /* Pods-VODPlayer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VODPlayer_Example-frameworks.sh"; sourceTree = "<group>"; };
-		D96B83B0276897EC000F6D5A /* BottomMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMaskView.swift; sourceTree = "<group>"; };
-		D96B83B327689D4F000F6D5A /* VODPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VODPlayerManager.swift; sourceTree = "<group>"; };
-		DC364A40043CACE1BC4F04BA2713797C /* VODPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VODPlayer.modulemap; sourceTree = "<group>"; };
-		DC9285C94FF524983B569B3F2E20985E /* VODPlayerLayerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayerLayerView.swift; sourceTree = "<group>"; };
+		D992FBA52782D722006F0E9C /* AirPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirPlay.swift; sourceTree = "<group>"; };
+		D992FBA72782DA0F006F0E9C /* AirPlayBackgrounView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirPlayBackgrounView.swift; sourceTree = "<group>"; };
+		D992FBA92782DBC2006F0E9C /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		D992FBAB2782ED34006F0E9C /* VODSelectSubtitleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VODSelectSubtitleVC.swift; sourceTree = "<group>"; };
+		DF04D8501A5127DB74FDB8A47AEA8C15 /* PanContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PanContainerView.swift; sourceTree = "<group>"; };
+		DFFDFE5A279FF9F29A09FF7352866115 /* VODPlayerResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayerResource.swift; sourceTree = "<group>"; };
 		E13B89FFD81AACB7530769CA05EEA26B /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
 		E14A09DC3AD8CA84464FEC37F0FC99D1 /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
 		E2C3B0B200350EAC8F42EF635FF31BD1 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
@@ -202,13 +254,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56D92B41377C82FAABAFE5FABDE6CF72 /* Frameworks */ = {
+		8A4B24E85118944542B1B5D14B5BD416 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EC85F54D225CE196C8314DEE1DBA451 /* AVFoundation.framework in Frameworks */,
-				DC68078DD6DE7B684E79761909EBCD46 /* Foundation.framework in Frameworks */,
-				855CE4D352A8487BDBA010F38DAF279D /* UIKit.framework in Frameworks */,
+				8D5AEC6D2ABB9EAACC162765C79F4DA9 /* AVFoundation.framework in Frameworks */,
+				0F950FAFFD1A48911F72E010481040A9 /* Foundation.framework in Frameworks */,
+				ED09CE222986DB55D850DCDDA5BFF606 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,26 +308,73 @@
 			path = "Target Support Files/Pods-VODPlayer_Example";
 			sourceTree = "<group>";
 		};
-		0C8D348D287E52161C99EEC28E416ADB /* Components */ = {
+		1D9E3D2287E963F42318F6F92B12CDB0 /* PanModal */ = {
 			isa = PBXGroup;
 			children = (
-				27AAE18B599F1BBE99A752C561F47EEF /* VODStackView.swift */,
+				35EC1C79375B26621EDAC5A235A6D654 /* PanModal.h */,
+				69669892C6E24C69C54CCEB6DB63B274 /* Animator */,
+				69A436DD00E941D66193110AE003F68D /* Controller */,
+				4214231BA4C45AA3C3D209F8555D284F /* Delegate */,
+				8580EC5D6E74ED3C77BE89B0575E42B8 /* Presentable */,
+				B4FAABC0DAE3A7454F86E303062F8229 /* Presenter */,
+				221D86FE4098646CB526AFB4141B2553 /* View */,
 			);
-			name = Components;
-			path = VODPlayer/Classes/Components;
+			path = PanModal;
 			sourceTree = "<group>";
 		};
-		0FFD41C512731846CB1F83CD03ED9AD7 /* VODPlayer */ = {
+		221D86FE4098646CB526AFB4141B2553 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D96B83B227689D2E000F6D5A /* Default */,
-				9BD19C4DD8E1C776E31BD71A3CF8EE8A /* Pod_Asset_VODPlayer.xcassets */,
-				4DED5D93B9E5BEC0D0E159A4CE86A6D5 /* Base */,
-				0C8D348D287E52161C99EEC28E416ADB /* Components */,
-				CE8292DB232ECAF9815B96533EEC51D6 /* Pod */,
-				EB5EBF78FD19A689911E4B75A6EB7EEA /* SubViews */,
-				A231E6355C5BD8FEE9FC42A7364694F5 /* Support Files */,
-				5B9E6B8650876529E625363BF4056E7C /* Views */,
+				5B28595DAAB6E853D50812D08D7ABE85 /* DimmedView.swift */,
+				DF04D8501A5127DB74FDB8A47AEA8C15 /* PanContainerView.swift */,
+				B6B4C3C1F55882119D53B948D58365B9 /* PanModelHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		235AC5D359845BACCAC9553C8B6D7D4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43C8972D82D11ED2D56CA02487BD3E54 /* VODPlayer.swift */,
+				A090B99C385C66F13FC2AD82479EB39B /* VODPlayerControls.swift */,
+				C19BA46E9213C0AFFA37DB0AE023FA7E /* VODPlayerLayerView.swift */,
+				DFFDFE5A279FF9F29A09FF7352866115 /* VODPlayerResource.swift */,
+			);
+			name = Views;
+			path = VODPlayer/Classes/Views;
+			sourceTree = "<group>";
+		};
+		243F94389EEA59311D47BDA175C221FC /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				812149CC211CCCC2712C23F4E19032F4 /* LICENSE */,
+				3986EA4F20F3A3A02ADB1D5E51DA928A /* README.md */,
+				0C55F09CBC094A54A3CC935117178D04 /* VODPlayer.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		4214231BA4C45AA3C3D209F8555D284F /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				30E3AC5DA95AF175F329EC71CA085BAF /* PanModalPresentationDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		42D88742D247E021A5F4CEEC7B0FC541 /* VODPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				66ADDBC9CCCBE22D0E5456D7B593D5D2 /* Pod_Asset_VODPlayer.xcassets */,
+				AF1CD189D6D3A39245D76848374CF989 /* Base */,
+				F941101D1001A2516DF10D4E96FBF268 /* Components */,
+				478B0E3F33ED6E9AA67A58618BB262F0 /* Controller */,
+				FC206D3E1338B426DC528B68FAB071E8 /* Default */,
+				5FF0A2D37F77F014821DB81578108F0F /* Helper */,
+				243F94389EEA59311D47BDA175C221FC /* Pod */,
+				7C1F5F6FC8D3A63E2A7A854A037CDAC6 /* SubViews */,
+				5216BF2ED10EF4014B41975316F6D37A /* Support Files */,
+				235AC5D359845BACCAC9553C8B6D7D4F /* Views */,
 			);
 			name = VODPlayer;
 			path = ../..;
@@ -291,26 +390,70 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		4DED5D93B9E5BEC0D0E159A4CE86A6D5 /* Base */ = {
+		478B0E3F33ED6E9AA67A58618BB262F0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				94868D98E1750E12AE4A9A7A777551DD /* VODPlayerBaseView.swift */,
-				B6F74933567741798E19A1FE9DCE40C0 /* VODPlayerExstension.swift */,
+				BBAC8E2FC2C07AAE77BE84F26991A2A0 /* VODQualityVideoVC.swift */,
+				D992FBAB2782ED34006F0E9C /* VODSelectSubtitleVC.swift */,
 			);
-			name = Base;
-			path = VODPlayer/Classes/Base;
+			name = Controller;
+			path = VODPlayer/Classes/Controller;
 			sourceTree = "<group>";
 		};
-		5B9E6B8650876529E625363BF4056E7C /* Views */ = {
+		5216BF2ED10EF4014B41975316F6D37A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				54CCB04E46FB24823EC6BE08F601F96C /* VODPlayer.swift */,
-				ACFDBDE37B652ED2B324661A60A9B5A1 /* VODPlayerControls.swift */,
-				DC9285C94FF524983B569B3F2E20985E /* VODPlayerLayerView.swift */,
-				3DF1ECDEE08B78ED5353460DBDDFD0F3 /* VODPlayerResource.swift */,
+				52DF1932772A47CFB2FBBE14A4816489 /* VODPlayer.modulemap */,
+				6AE80D8FB184C16C9F052802E7BC035E /* VODPlayer-dummy.m */,
+				90EE500698D3A4ABF7E626CDF7D88BAE /* VODPlayer-Info.plist */,
+				1A659A85AF8624BFF77CF03E31DCBA9E /* VODPlayer-prefix.pch */,
+				69D407C27AE9D29A55A507EB26A3D2B1 /* VODPlayer-umbrella.h */,
+				26F9E4D5202B8C511ED58E4AE4E24867 /* VODPlayer.debug.xcconfig */,
+				CFC4DF5557C9C188B497056EA7F4B6CC /* VODPlayer.release.xcconfig */,
 			);
-			name = Views;
-			path = VODPlayer/Classes/Views;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/VODPlayer";
+			sourceTree = "<group>";
+		};
+		5FF0A2D37F77F014821DB81578108F0F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D992FBA52782D722006F0E9C /* AirPlay.swift */,
+				4526C808C1754D436A1EE8E73FB0CD1C /* ManifestBuilder.swift */,
+				4E9EB356035836609734B3446F0F2A95 /* MasterPlaylist.swift */,
+				AFC8019BBC574E6423EF4C61E5143E54 /* VODPlayList.swift */,
+				D992FBA92782DBC2006F0E9C /* Connectivity.swift */,
+			);
+			name = Helper;
+			path = VODPlayer/Classes/Helper;
+			sourceTree = "<group>";
+		};
+		69669892C6E24C69C54CCEB6DB63B274 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				0EF66250EE5344C10F2DDDF4A5B66C30 /* PanModalAnimator.swift */,
+				6E4370625DD9163D52E222C19FA6E853 /* PanModalPresentationAnimator.swift */,
+			);
+			path = Animator;
+			sourceTree = "<group>";
+		};
+		69A436DD00E941D66193110AE003F68D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				398447272D64EA9648F1926C1A78ADCA /* PanModalPresentationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7C1F5F6FC8D3A63E2A7A854A037CDAC6 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				32C4747F30EA6C43CB3ED58F39BFA89A /* BottomMaskView.swift */,
+				751B11690FBFFB8ABDB75E62E2290AC3 /* TopMaskView.swift */,
+				D992FBA72782DA0F006F0E9C /* AirPlayBackgrounView.swift */,
+			);
+			name = SubViews;
+			path = VODPlayer/Classes/SubViews;
 			sourceTree = "<group>";
 		};
 		7F02E3862C6E84203E8324D9D0088797 /* SnapKit */ = {
@@ -372,6 +515,18 @@
 			path = "../Target Support Files/SnapKit";
 			sourceTree = "<group>";
 		};
+		8580EC5D6E74ED3C77BE89B0575E42B8 /* Presentable */ = {
+			isa = PBXGroup;
+			children = (
+				A56E15D3A09557B11AE5F49C52A54907 /* PanModalHeight.swift */,
+				70CFFBA9034FB3CF1A7FBC7AEEEDDC40 /* PanModalPresentable.swift */,
+				5B62D25C00C54DCD7C0AFF27CCC2F4AE /* PanModalPresentable+Defaults.swift */,
+				4A56EAF07BF84140A0A67C17D5002209 /* PanModalPresentable+LayoutHelpers.swift */,
+				8B82E099CE32388935068187CFA5FA4A /* PanModalPresentable+UIViewController.swift */,
+			);
+			path = Presentable;
+			sourceTree = "<group>";
+		};
 		9362BD99021D45F20C6AB17992FC3447 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,21 +534,6 @@
 				A5269A941DCF5545A424F60EBF776F29 /* Pods-VODPlayer_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		A231E6355C5BD8FEE9FC42A7364694F5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DC364A40043CACE1BC4F04BA2713797C /* VODPlayer.modulemap */,
-				8EB9A1B3AE6521C9F41AC458B38EDD47 /* VODPlayer-dummy.m */,
-				31B9C6AB5DD36FB06B80159B3081757A /* VODPlayer-Info.plist */,
-				2485AD92219DE85DFA4F487D69BBA562 /* VODPlayer-prefix.pch */,
-				58901E9C3674A27F8A38CDD7A9051E62 /* VODPlayer-umbrella.h */,
-				50A9170B12B1F27845F367AA34888C4B /* VODPlayer.debug.xcconfig */,
-				2633DD881EC259FA8A8BDD05B3F6B256 /* VODPlayer.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/VODPlayer";
 			sourceTree = "<group>";
 		};
 		A5269A941DCF5545A424F60EBF776F29 /* Pods-VODPlayer_Tests */ = {
@@ -412,6 +552,27 @@
 			path = "Target Support Files/Pods-VODPlayer_Tests";
 			sourceTree = "<group>";
 		};
+		AF1CD189D6D3A39245D76848374CF989 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				68E4C42330F74999AA3CFB1F83874359 /* BaseCollectionViewFlowLayout.swift */,
+				9FC5D5814B4A690A1995C5ED2F6EE474 /* VODBaseVC.swift */,
+				0BA88054FB31B44411C41EB8D12D30AB /* VODBaseView.swift */,
+				0B06032803377AEEDA5A4422909479FF /* VODPlayerExstension.swift */,
+			);
+			name = Base;
+			path = VODPlayer/Classes/Base;
+			sourceTree = "<group>";
+		};
+		B4FAABC0DAE3A7454F86E303062F8229 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				24B12D33FB40EAD772456A33FD3F6B31 /* PanModalPresenter.swift */,
+				A01929713DCFF444A47B0D1AF34E1C5D /* UIViewController+PanModalPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		BA22F08D059965C9A09F78196176CEDB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,21 +581,11 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CE8292DB232ECAF9815B96533EEC51D6 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				9B38AA042A571638983BC83736D0E8ED /* LICENSE */,
-				4E0EEF4DBBEA7D373614A757DE7856D0 /* README.md */,
-				997A39DA0227182033EF4A43FAE63FBC /* VODPlayer.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				F9934D44C3A281E51B9F86CB5526C37C /* Development Pods */,
+				CF4AD10635D98A08FE39DFCC4283E058 /* Development Pods */,
 				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
 				BA22F08D059965C9A09F78196176CEDB /* Pods */,
 				F88BFEBD11C123862EF0305104B47684 /* Products */,
@@ -442,23 +593,12 @@
 			);
 			sourceTree = "<group>";
 		};
-		D96B83B227689D2E000F6D5A /* Default */ = {
+		CF4AD10635D98A08FE39DFCC4283E058 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D96B83B327689D4F000F6D5A /* VODPlayerManager.swift */,
+				42D88742D247E021A5F4CEEC7B0FC541 /* VODPlayer */,
 			);
-			name = Default;
-			path = VODPlayer/Classes/Default;
-			sourceTree = "<group>";
-		};
-		EB5EBF78FD19A689911E4B75A6EB7EEA /* SubViews */ = {
-			isa = PBXGroup;
-			children = (
-				A5F8F15A81B01D4E61FAF41A5D95A7B2 /* TopMaskView.swift */,
-				D96B83B0276897EC000F6D5A /* BottomMaskView.swift */,
-			);
-			name = SubViews;
-			path = VODPlayer/Classes/SubViews;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		F88BFEBD11C123862EF0305104B47684 /* Products */ = {
@@ -472,12 +612,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F9934D44C3A281E51B9F86CB5526C37C /* Development Pods */ = {
+		F941101D1001A2516DF10D4E96FBF268 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				0FFD41C512731846CB1F83CD03ED9AD7 /* VODPlayer */,
+				7E3259CEDEE2A197F01D4B78D08B0E42 /* VODPlayListView.swift */,
+				3CD4B70E3DF1908C6E76C2027563BA5B /* VODStackView.swift */,
+				1D9E3D2287E963F42318F6F92B12CDB0 /* PanModal */,
 			);
-			name = "Development Pods";
+			name = Components;
+			path = VODPlayer/Classes/Components;
+			sourceTree = "<group>";
+		};
+		FC206D3E1338B426DC528B68FAB071E8 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				79930C7EB33773BB5136B5956A185F30 /* VODPlayerManager.swift */,
+			);
+			name = Default;
+			path = VODPlayer/Classes/Default;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -488,6 +640,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1890C8BF1C541DE39DCC2E0DBA35374A /* Pods-VODPlayer_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D33B2FE3A49276EEBC931F828BAEBB5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03B87115B1E74E2C949874C4ADFE8AFF /* PanModal.h in Headers */,
+				7963DEF6C44F24354039974B38FC4791 /* VODPlayer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,14 +668,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FEC1588CF223AAE98E253F225BDC7B34 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				536B9867DD4D210D5BC5A0F24A06527B /* VODPlayer-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -530,8 +683,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				E8A57F0F5B691F3F44DD43C53EF1EB3B /* PBXTargetDependency */,
-				AD186A0137DAA79BAFBE9AFD7E38AC4F /* PBXTargetDependency */,
+				DD8E251BE7E873DECF389AC28B40279E /* PBXTargetDependency */,
+				9267F65263AE756E10B554395CC55270 /* PBXTargetDependency */,
 			);
 			name = "Pods-VODPlayer_Example";
 			productName = Pods_VODPlayer_Example;
@@ -558,17 +711,17 @@
 		};
 		492E84D0A7256AAF7F70628981CF2A02 /* VODPlayer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 034ABEFBEB582E8E5AF9732F8F890F83 /* Build configuration list for PBXNativeTarget "VODPlayer" */;
+			buildConfigurationList = 191A6643A1BCC2D05758BDD14AAB6DD8 /* Build configuration list for PBXNativeTarget "VODPlayer" */;
 			buildPhases = (
-				FEC1588CF223AAE98E253F225BDC7B34 /* Headers */,
-				E57A62606F46E4E60ACEA156694E9D9B /* Sources */,
-				56D92B41377C82FAABAFE5FABDE6CF72 /* Frameworks */,
-				A1FAEFE8F4ED226CD0FB42EBC6162470 /* Resources */,
+				2D33B2FE3A49276EEBC931F828BAEBB5 /* Headers */,
+				EE70808F733663C8D3B26FE6AAFB7860 /* Sources */,
+				8A4B24E85118944542B1B5D14B5BD416 /* Frameworks */,
+				97BB8FAA0BC2EC2BBC0620647FCCECA5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4E95FA9828D547A3D4AD19C3C9FF28D9 /* PBXTargetDependency */,
+				343EEEB2B3841166C514360C5DF06F8D /* PBXTargetDependency */,
 			);
 			name = VODPlayer;
 			productName = VODPlayer;
@@ -587,7 +740,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				FD5BF07CF4452D30690771B870702444 /* PBXTargetDependency */,
+				C0BB4F8E565AC68F53DE23070F32DCD3 /* PBXTargetDependency */,
 			);
 			name = "Pods-VODPlayer_Tests";
 			productName = Pods_VODPlayer_Tests;
@@ -625,11 +778,11 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A1FAEFE8F4ED226CD0FB42EBC6162470 /* Resources */ = {
+		97BB8FAA0BC2EC2BBC0620647FCCECA5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5898F2340C3D0D660E29F46E5299F19 /* Pod_Asset_VODPlayer.xcassets in Resources */,
+				7F8F71D2C17DBC3251FE6FDAE26321F3 /* Pod_Asset_VODPlayer.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,50 +870,75 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E57A62606F46E4E60ACEA156694E9D9B /* Sources */ = {
+		EE70808F733663C8D3B26FE6AAFB7860 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD2863611C0948D854C5100B854A4CF6 /* TopMaskView.swift in Sources */,
-				0DB67A612C2498638C535BA4FF3FC539 /* VODPlayer.swift in Sources */,
-				C4957965F0F0E708D6992BA0ED62FEC8 /* VODPlayer-dummy.m in Sources */,
-				EF81751E1EB3D740D7733F8FCD2EF986 /* VODPlayerBaseView.swift in Sources */,
-				E3FCB6B54B9E3C82EAF944CC5B97020C /* VODPlayerControls.swift in Sources */,
-				0760821B3C6FF3FECDEEC263628C7354 /* VODPlayerExstension.swift in Sources */,
-				F34A61D8C7F7675FEFE78AC8931FDF29 /* VODPlayerLayerView.swift in Sources */,
-				7CBAD943F5EC39258638F4668E80BE42 /* VODPlayerResource.swift in Sources */,
-				D96B83B1276897EC000F6D5A /* BottomMaskView.swift in Sources */,
-				D96B83B427689D4F000F6D5A /* VODPlayerManager.swift in Sources */,
-				BDC76F2BD7715F1A6C053772CDEAE9FC /* VODStackView.swift in Sources */,
+				090062B8713C717BF1D8F1539C6796F1 /* BaseCollectionViewFlowLayout.swift in Sources */,
+				23CCA120539F2C7B8E85D4FF633717FB /* BottomMaskView.swift in Sources */,
+				0B00FF560435F8A597D1AD9416189FFE /* DimmedView.swift in Sources */,
+				9EE32D27F2E0011A9519CB21ACB8FB81 /* ManifestBuilder.swift in Sources */,
+				35C8ACFB0885DF3225358453015D2115 /* MasterPlaylist.swift in Sources */,
+				F014C0B16951FC5D12A0DFC4D00D3BF5 /* PanContainerView.swift in Sources */,
+				A8685A7216290490E21CDFD09C362797 /* PanModalAnimator.swift in Sources */,
+				C56254659133FD8B00095A314547EA09 /* PanModalHeight.swift in Sources */,
+				FC0BC60BB0A43ADD39E2E4261CAA2EC8 /* PanModalPresentable.swift in Sources */,
+				D015B354648A7D60C5C06A9370EDFC53 /* PanModalPresentable+Defaults.swift in Sources */,
+				D1A0616DFA167FE301FD113F735E22CF /* PanModalPresentable+LayoutHelpers.swift in Sources */,
+				F23109243D24AFEDEBA14C6B67DE940A /* PanModalPresentable+UIViewController.swift in Sources */,
+				28566D5D5C7E62ACA40A31D850144F85 /* PanModalPresentationAnimator.swift in Sources */,
+				53E949668C78741B33BF372E503F2BF7 /* PanModalPresentationController.swift in Sources */,
+				0AB2418A06B760F581BE16F448CD1682 /* PanModalPresentationDelegate.swift in Sources */,
+				623122A874F44328E68BF9C1D4FDFF80 /* PanModalPresenter.swift in Sources */,
+				7009AB030F21E476FC8403BCA28A3788 /* PanModelHeaderView.swift in Sources */,
+				FF0FE8A5433C8ECD69F0B245E1DD8498 /* TopMaskView.swift in Sources */,
+				2E7D74D28E00A4195D374012488C08CF /* UIViewController+PanModalPresenter.swift in Sources */,
+				F7E15C1BDB9AD6EABE08B9170DA732CE /* VODBaseVC.swift in Sources */,
+				D992FBA62782D722006F0E9C /* AirPlay.swift in Sources */,
+				EA467363FF2FBA3CA745D128F0EFAD29 /* VODBaseView.swift in Sources */,
+				6829838CB27902D15900B48E5E096D74 /* VODPlayer.swift in Sources */,
+				6DD94A892E12BF57DF640ABDF3D0853C /* VODPlayer-dummy.m in Sources */,
+				D992FBA82782DA0F006F0E9C /* AirPlayBackgrounView.swift in Sources */,
+				F0BBF269801C38AE0AEDD2CEC60A00F3 /* VODPlayerControls.swift in Sources */,
+				DF1233FAC8BFC7FA18BE6BAB04266F89 /* VODPlayerExstension.swift in Sources */,
+				D992FBAA2782DBC2006F0E9C /* Connectivity.swift in Sources */,
+				FC7C8B7AC748E911CB7CDB23A0A77FCA /* VODPlayerLayerView.swift in Sources */,
+				D415521EDDBD75817E11CC79CC8CFACA /* VODPlayerManager.swift in Sources */,
+				D992FBAC2782ED34006F0E9C /* VODSelectSubtitleVC.swift in Sources */,
+				81B9C933E42B217198C479133DAEFF2E /* VODPlayerResource.swift in Sources */,
+				FE04848552BD5AE2242DAF513B27BC09 /* VODPlayList.swift in Sources */,
+				04E93848549273F253F063A26F3E176A /* VODPlayListView.swift in Sources */,
+				5641F61B7620C1DE319EA095A7878E80 /* VODQualityVideoVC.swift in Sources */,
+				29CB75DFCD497DBFC0EE0BBF8536F954 /* VODStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4E95FA9828D547A3D4AD19C3C9FF28D9 /* PBXTargetDependency */ = {
+		343EEEB2B3841166C514360C5DF06F8D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SnapKit;
 			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
-			targetProxy = 455E5A74749DACF7214A9BC41CCB0DE2 /* PBXContainerItemProxy */;
+			targetProxy = 983676F6A0EBE01F5D380F5DEFE0B5F1 /* PBXContainerItemProxy */;
 		};
-		AD186A0137DAA79BAFBE9AFD7E38AC4F /* PBXTargetDependency */ = {
+		9267F65263AE756E10B554395CC55270 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VODPlayer;
 			target = 492E84D0A7256AAF7F70628981CF2A02 /* VODPlayer */;
-			targetProxy = BBD3A742A2AE49E5ABABC9FFD2BDFC74 /* PBXContainerItemProxy */;
+			targetProxy = 5A29F8C64BF7A9B7E5663CB9B380C0E4 /* PBXContainerItemProxy */;
 		};
-		E8A57F0F5B691F3F44DD43C53EF1EB3B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SnapKit;
-			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
-			targetProxy = 20217BD8EE4AB45C47065F0FB3A972FB /* PBXContainerItemProxy */;
-		};
-		FD5BF07CF4452D30690771B870702444 /* PBXTargetDependency */ = {
+		C0BB4F8E565AC68F53DE23070F32DCD3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-VODPlayer_Example";
 			target = 12FA35C47FB944CA6CD8BF71BD2262E7 /* Pods-VODPlayer_Example */;
-			targetProxy = 1F37E9914A64C7FD0EC5C63AC2AC7C7D /* PBXContainerItemProxy */;
+			targetProxy = 6FC0287FD1F245620A38393988162CBD /* PBXContainerItemProxy */;
+		};
+		DD8E251BE7E873DECF389AC28B40279E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SnapKit;
+			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
+			targetProxy = D8B1B0CFF86D481F97EA41EFCF94B330 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -830,37 +1008,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		1E1752445DF63ECFAAD9D487F79DB42A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50A9170B12B1F27845F367AA34888C4B /* VODPlayer.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/VODPlayer/VODPlayer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/VODPlayer/VODPlayer-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/VODPlayer/VODPlayer.modulemap";
-				PRODUCT_MODULE_NAME = VODPlayer;
-				PRODUCT_NAME = VODPlayer;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -992,38 +1139,6 @@
 			};
 			name = Debug;
 		};
-		4BDF0497B24191390A814B764E161EF3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2633DD881EC259FA8A8BDD05B3F6B256 /* VODPlayer.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/VODPlayer/VODPlayer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/VODPlayer/VODPlayer-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/VODPlayer/VODPlayer.modulemap";
-				PRODUCT_MODULE_NAME = VODPlayer;
-				PRODUCT_NAME = VODPlayer;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1082,6 +1197,38 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		836355A5E5C8C43FC8C44D44FB2BD014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFC4DF5557C9C188B497056EA7F4B6CC /* VODPlayer.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VODPlayer/VODPlayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VODPlayer/VODPlayer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VODPlayer/VODPlayer.modulemap";
+				PRODUCT_MODULE_NAME = VODPlayer;
+				PRODUCT_NAME = VODPlayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1152,23 +1299,54 @@
 			};
 			name = Debug;
 		};
+		EF74193E4BBEC2E82130EB499BEE97FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26F9E4D5202B8C511ED58E4AE4E24867 /* VODPlayer.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VODPlayer/VODPlayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VODPlayer/VODPlayer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VODPlayer/VODPlayer.modulemap";
+				PRODUCT_MODULE_NAME = VODPlayer;
+				PRODUCT_NAME = VODPlayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		034ABEFBEB582E8E5AF9732F8F890F83 /* Build configuration list for PBXNativeTarget "VODPlayer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1E1752445DF63ECFAAD9D487F79DB42A /* Debug */,
-				4BDF0497B24191390A814B764E161EF3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		0DDBAC64B560E444D8BDFEAA498FBDF4 /* Build configuration list for PBXNativeTarget "Pods-VODPlayer_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC8229351AC163AAB72FB792A78E5C0D /* Debug */,
 				1AD8BD8256C004CA2E9B228812F9CDDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		191A6643A1BCC2D05758BDD14AAB6DD8 /* Build configuration list for PBXNativeTarget "VODPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF74193E4BBEC2E82130EB499BEE97FA /* Debug */,
+				836355A5E5C8C43FC8C44D44FB2BD014 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

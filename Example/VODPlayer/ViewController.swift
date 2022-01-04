@@ -21,7 +21,7 @@ class ViewController: UIViewController {
             make.edges.equalToSuperview()
         }
     }
-
+    
     
     lazy var btnVideo: UILabel = {
         let lb = UILabel()
@@ -38,9 +38,10 @@ class ViewController: UIViewController {
     
     
     @objc func handleTap() {
-
+        
         let resource = VODPlayerResource.init(
-            movieId: 0, url: URL(string: "https://dev-adc.obs.ap-southeast-3.myhuaweicloud.com/pharim-testing/test3/index.m3u8")!
+            movieId: 0,
+            url: URL(string: "https://dev-adc.obs.ap-southeast-3.myhuaweicloud.com/pharim-testing/test3/index.m3u8")!
         )
         
         // Config
@@ -57,6 +58,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 

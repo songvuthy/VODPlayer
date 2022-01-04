@@ -230,7 +230,6 @@ extension VODPlayerControls {
         case brightness     = 106
         case volume         = 107
         case cancelDownload = 108
-        case skipPreview    = 109
         
     }
     
@@ -257,5 +256,65 @@ extension TimeInterval {
 extension Int {
     var msToSeconds: Double {
         return Double(self) / 1000
+    }
+}
+
+extension String {
+    var vodGetQuality: String {
+        let quality = self.components(separatedBy: "x")
+        return quality[1]
+    }
+    var vodGetResolution: CGSize {
+        let quality = self.components(separatedBy: "x")
+        let w = (quality[0] as NSString).floatValue
+        let h = (quality[1] as NSString).floatValue
+        return CGSize(width: CGFloat(w), height: CGFloat(h))
+    }
+    
+    private var vodHtmlToAttributedString: NSAttributedString? {
+        guard let data = data(using: .utf8, allowLossyConversion: true) else { return NSAttributedString() }
+        do {
+            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding:String.Encoding.utf8.rawValue], documentAttributes: nil)
+        } catch {
+            return NSAttributedString()
+        }
+    }
+    var vodHtmlToString: String {
+        return vodHtmlToAttributedString?.string ?? ""
+    }
+}
+
+
+extension UICollectionReusableView {
+    static var reuseIdentifier: String {
+        return String(describing: Self.self)
+    }
+}
+
+extension UICollectionView {
+    func register<T: UICollectionViewCell>(cell: T.Type) {
+        register(T.self, forCellWithReuseIdentifier: T.reuseIdentifier)
+    }
+    
+    func register<T: UICollectionReusableView>(header: T.Type) {
+        register(T.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: T.reuseIdentifier)
+    }
+    
+    func register<T: UICollectionReusableView>(footer: T.Type) {
+        register(T.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: T.reuseIdentifier)
+    }
+}
+
+extension UICollectionView {
+    func dequeue<T: UICollectionViewCell>(for indexPath: IndexPath) -> T {
+        return dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as! T
+    }
+    
+    func dequeue<T: UICollectionReusableView>(forHeader indexPath: IndexPath) -> T {
+        return dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: T.reuseIdentifier, for: indexPath) as! T
+    }
+    
+    func dequeue<T: UICollectionReusableView>(forFooter indexPath: IndexPath) -> T {
+        return dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: T.reuseIdentifier, for: indexPath) as! T
     }
 }

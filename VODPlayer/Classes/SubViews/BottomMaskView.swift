@@ -39,9 +39,9 @@ class BottomMaskView: VODBaseView {
         timeSlider.maximumValue   = 1.0
         timeSlider.minimumValue   = 0.0
         timeSlider.value          = 0.0
-        timeSlider.thumbTintColor = #colorLiteral(red: 0.9960784314, green: 0.5333333333, blue: 0.01176470588, alpha: 1) // #FDB316
+        timeSlider.thumbTintColor = VODPlayerConf.progressColor
         timeSlider.maximumTrackTintColor = .clear
-        timeSlider.minimumTrackTintColor = #colorLiteral(red: 0.9960784314, green: 0.5333333333, blue: 0.01176470588, alpha: 1) // #FDB316
+        timeSlider.minimumTrackTintColor = VODPlayerConf.progressColor
         
     }
     override func setupConstraint() {

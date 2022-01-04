@@ -54,21 +54,23 @@ import SnapKit
 public class VODPlayerControls: VODBaseView {
     open weak var delegate: VODPlayerControlViewDelegate?
     weak var vodPlayer: VODPlayer?
+    open var resource: VODPlayerResource?
     open var delayItem: DispatchWorkItem?
+    
     //    MARK: - Variable
     open var totalDuration: TimeInterval = 0
     open var currentTime :  TimeInterval = 0
     open var playerLastState: VODPlayerState  = .notSetURL
-    open var animateDelayTimeInterval = TimeInterval(5)
     open var isMaskShowing            = true
     open var isSliderSliding :Bool    = false
     open var isBufferFinishedFirstTime: Bool = false
     // Activty Indector for loading
     open var loadingIndicator  = UIActivityIndicatorView(style: .whiteLarge)
-   //    MARK: - Variable view
-    open var resource: VODPlayerResource?
+    
+    //    MARK: - Variable view
     
     var mainMaskView   = UIView()
+    var airplayView    = AirPlayBackgroundView()
     var topMaskView    = TopMaskView()
     var bottomMaskView = BottomMaskView()
     var playButton   = UIButton(type: UIButton.ButtonType.custom)
@@ -101,7 +103,7 @@ public class VODPlayerControls: VODBaseView {
             default :break
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + animateDelayTimeInterval,
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + VODPlayerConf.animateDelayTimeInterval,
                                       execute: delayItem!)
     }
     /**
@@ -123,7 +125,7 @@ public class VODPlayerControls: VODBaseView {
             wSelf.mainMaskView.backgroundColor = UIColor(white: 0, alpha: isShow ? 0.4 : 0.0)
             wSelf.topMaskView.alpha    = alpha
             wSelf.bottomMaskView.alpha = alpha
-
+            
             if wSelf.playerLastState == .buffering || wSelf.playerLastState == .notSetURL {
                 wSelf.playButton.alpha = 0
             }else {
@@ -166,6 +168,7 @@ public class VODPlayerControls: VODBaseView {
         self.currentTime = currentTime
         bottomMaskView.currentTimeLabel.text = VODPlayerControls.formatSecondsToString(totalTime - currentTime)
         bottomMaskView.timeSlider.value      = Float(currentTime) / Float(totalTime)
+        
     }
     open func playerStateDidChange(state: VODPlayerState) {
         playerLastState = state
@@ -173,25 +176,25 @@ public class VODPlayerControls: VODBaseView {
         case .error:
             showLoader()
             playerLastState = .notSetURL
-//            print("This video can't play.")
+            //            print("This video can't play.")
             
         case .readyToPlay:
             break
-//            print("This video is readyToPlay")
+            //            print("This video is readyToPlay")
             
         case .buffering:
             showLoader()
-//            print("This video is buffering")
+            //            print("This video is buffering")
             
         case .bufferFinished:
             hideLoader()
             bufferFinished()
-//            print("This video is bufferFinished")
+            //            print("This video is bufferFinished")
             
         case .playedToTheEnd:
             playedToTheEnd()
             controlViewAnimation(isShow: true)
-//            print("This video is playedToTheEnd")
+            //            print("This video is playedToTheEnd")
         default:
             break
         }
@@ -230,18 +233,49 @@ public class VODPlayerControls: VODBaseView {
             next10Button.alpha = isMaskShowing ? 1 : 0
             next10Button.isUserInteractionEnabled = true
             
-//            enableDownload()
-//            enableMirror()
-//            enableSubtitles()
-//            enableSettingView()
+//            if VODPlayerConf.enableDownload { enableDownload() }
+            if VODPlayerConf.enableMirror { enableMirror() }
+            if VODPlayerConf.enableMirror { enableSettingView() }
             
             // Set isBufferFinishedFirstTime = true to prevent don't it call again
             isBufferFinishedFirstTime = true
         }
     }
-
+    
     // MARK: - Action Response
-   
+    
+    // Enable Download
+    private func enableDownload(){
+        if VODDataLocal.playPlayList.count == 0 { return }
+        
+        #if targetEnvironment(simulator)
+        // your simulator code
+        topMaskView.downloadView.vodEnableView(isEnable: false)
+        #else
+        
+        
+        #endif
+    }
+    
+    // Enable Setting
+    private func enableSettingView(){
+        topMaskView.settingView.vodEnableView()
+    }
+    // Enable Mirror
+    private func enableMirror() {
+        topMaskView.mirrorView.vodEnableView(isEnable: Connectivity.isConnectedToWiFi())
+    }
+    open func isActiveMirror(isActive: Bool = false) {
+        backgroundColor = isActive ? .black : .clear
+        topMaskView.mirrorView.imageView.vodEnableImageView(isActive: isActive)
+        checkAirPlayState(isConnected: isActive)
+    }
+    
+    private func checkAirPlayState(isConnected: Bool) {
+        airplayView.isHidden = !isConnected
+        airplayView.setupDescription(deviceName: AirPlay.connectedDevice ?? "")
+    }
+    
     /**
      Call when some action button Pressed
      
@@ -324,10 +358,13 @@ public class VODPlayerControls: VODBaseView {
     }
     //    MARK: - ConfigureLayout
     override func setupComponents() {
-        [mainMaskView, playButton, pre10Button, next10Button,loadingIndicator].forEach({ addSubview($0) })
+        [airplayView, mainMaskView, playButton, pre10Button, next10Button,loadingIndicator].forEach({ addSubview($0) })
         mainMaskView.backgroundColor = UIColor(white: 0, alpha: 0.5)
         // Add subView on main mask view
         [topMaskView, bottomMaskView].forEach({ mainMaskView.addSubview($0) })
+        
+        // AirPlay Background
+        airplayView.isHidden = true
         
         playButton.tag = VODPlayerControls.ButtonType.play.rawValue
         playButton.adjustsImageWhenHighlighted = false
@@ -340,19 +377,19 @@ public class VODPlayerControls: VODBaseView {
         pre10Button.setImage(VODImageResourcePath("VOD_Icon_Pre10"), for: .normal)
         pre10Button.setImage(VODImageResourcePath("VOD_Icon_Pre_10"), for: .selected)
         pre10Button.addTarget(self, action: #selector(onButtonPressed(_:)), for: .touchUpInside)
-
+        
         next10Button.tag = VODPlayerControls.ButtonType.next10.rawValue
         next10Button.adjustsImageWhenHighlighted = false
         next10Button.setImage(VODImageResourcePath("VOD_Icon_Next10"), for: .normal)
         next10Button.setImage(VODImageResourcePath("VOD_Icon_Next_10"), for: .selected)
         next10Button.addTarget(self, action: #selector(onButtonPressed(_:)), for: .touchUpInside)
-
-    
+        
+        
         // Setup Event
         let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(onTapGestureTapped(_:)))
         singleTapGesture.numberOfTapsRequired = 1
         mainMaskView.addGestureRecognizer(singleTapGesture)
-
+        
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(onTapGestureTapped(_:)))
         doubleTapGesture.numberOfTapsRequired = 2
         mainMaskView.addGestureRecognizer(doubleTapGesture)
@@ -362,7 +399,7 @@ public class VODPlayerControls: VODBaseView {
         let canCelsTouchesTopMaskView = UITapGestureRecognizer(target: self, action:nil)
         canCelsTouchesTopMaskView.cancelsTouchesInView = false
         topMaskView.addGestureRecognizer(canCelsTouchesTopMaskView)
-
+        
         // canCelsTouchesBottomMaskView
         let canCelsTouchesBottomMaskView = UITapGestureRecognizer(target: self, action:nil)
         canCelsTouchesBottomMaskView.cancelsTouchesInView = false
@@ -376,16 +413,11 @@ public class VODPlayerControls: VODBaseView {
         let tapDownloadView = UITapGestureRecognizer(target: self, action: #selector(onTapAction(_:)))
         topMaskView.downloadView.addGestureRecognizer(tapDownloadView)
         
-//        let tapCancelDownloadView = UITapGestureRecognizer(target: self, action: #selector(onTapAction(_:)))
-//        topMaskView.circularView.addGestureRecognizer(tapCancelDownloadView)
         
         // tapMirrorView
         let tapMirrorView = UITapGestureRecognizer(target: self, action: #selector(onTapAction(_:)))
         topMaskView.mirrorView.addGestureRecognizer(tapMirrorView)
         
-        // subtitleView
-        let tapSubtitleView = UITapGestureRecognizer(target: self, action: #selector(onTapAction(_:)))
-        topMaskView.subtitleView.addGestureRecognizer(tapSubtitleView)
         
         // settingView
         let tapSettingView = UITapGestureRecognizer(target: self, action: #selector(onTapAction(_:)))
@@ -410,6 +442,9 @@ public class VODPlayerControls: VODBaseView {
     }
     
     override func setupConstraint() {
+        airplayView.snp.remakeConstraints { make in
+            make.edges.equalToSuperview()
+        }
         
         // Main mask view
         mainMaskView.snp.remakeConstraints { make in

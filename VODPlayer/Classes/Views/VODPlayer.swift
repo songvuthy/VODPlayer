@@ -9,6 +9,11 @@ import UIKit
 import SnapKit
 public class VODPlayer: VODBaseView {
     open var backBlock:(() -> Void)?
+    open var vc: UIViewController!
+    
+    private var vodQualityVideoVC: VODQualityVideoVC!
+    private var vodSelectSubtitleVC: VODSelectSubtitleVC!
+    
     // View
     fileprivate var playerControls: VODPlayerControls!
     fileprivate var playerLayer   : VODPlayerLayerView!
@@ -61,12 +66,29 @@ extension VODPlayer{
      - parameter resource: media resource
      */
     open func setVideo(resource: VODPlayerResource) {
-
+//        preparePlaySubtitle(resource: resource)
+        
         let url: URL = resource.url
         prepareToDeinit()
         playerControls.prepareUI(for: resource)
         playerLayer.playURL(url: url)
+        
+        // Checking set up Monitoring when play movie
+        
+        AirPlay.startMonitoring()
+        AirPlay.whenAvailable = { [weak self] in
+            self?.airplaySate()
+        }
+        
+        AirPlay.whenUnavailable = { [weak self] in
+            self?.airplaySate()
+        }
+        
+        AirPlay.whenRouteChanged = { [weak self] in
+            self?.airplaySate()
+        }
     }
+    
     
     /**
      Play
@@ -86,6 +108,35 @@ extension VODPlayer{
     open func prepareToDeinit(){
         playerLayer.prepareToDeinit()
     }
+    
+    private func changePlaySpeed(speed: VODPlaySpeed){
+        guard let rate = Float(speed.dataType.rawValue) else { return }
+        playerLayer.setPlaybackSpeed(rate: rate)
+    }
+    private func changeQuality(quality: VODPlayList){
+        playerLayer.changeQuality(
+            quality: quality,
+            currentTime: currentTime
+        )
+    }
+    private func updateStateSubtitle(vodSubtitle: VODSubtitleLanguages){
+//        playerControls.subtitle = vodSubtitle.subtitle
+//        playerControls.isActiveSubtitles()
+    }
+    private func airplaySate() {
+        playerControls.isActiveMirror(isActive: AirPlay.isConnected)
+        
+    }
+    /// Prepare PlaySubtitle
+//    private func preparePlaySubtitle(resource: VODPlayerResource) {
+//        if resource.subtitles.count > 0 {
+//            var off = VODSubtitleLanguages.init(language: "Off", subtitle: nil)
+//            off.checkmark = true
+//            VODDataLocal.playSubtile.removeAll()
+//            VODDataLocal.playSubtile.append(off)
+//            VODDataLocal.playSubtile.append(contentsOf: resource.subtitles)
+//        }
+//    }
 }
 
 extension VODPlayer: VODPlayerControlViewDelegate {
@@ -99,7 +150,6 @@ extension VODPlayer: VODPlayerControlViewDelegate {
             switch action {
             case .play:
                 button.isSelected ? pause() : play()
-                
             case .replay:
                 seek(TimeInterval(0)) { [weak self] in
                     self?.play()
@@ -108,9 +158,7 @@ extension VODPlayer: VODPlayerControlViewDelegate {
                 
             case.pre10:
                 controlView.updateCurrentTime(btnView: controlView.pre10Button, duration: -TimeInterval(10))
-                return
             case .next10:
-                return
                 controlView.updateCurrentTime(btnView: controlView.next10Button, duration: TimeInterval(10))
             }
         }
@@ -118,31 +166,26 @@ extension VODPlayer: VODPlayerControlViewDelegate {
     
     public func controlView(controlView: VODPlayerControls, didTapAction action: UITapGestureRecognizer) {
         if let action = VODPlayerControls.TapActionType(rawValue: action.view!.tag){
-
+            
             switch action {
             case .back:
                 backBlock?()
-//                    AirPlay.stopMonitoring()
+                AirPlay.stopMonitoring()
                 
             case .download:
-//                    vodPlayerDelegate?.vodPlayerDownload()
+
                 break
             case .cancelDownload:
-//                    vodPlayerDelegate?.vodPlayerCancelDownload()
+
                 break
             case .mirror:
-//                    AirPlay.displayAirplay()
-                break
+                AirPlay.displayAirplay()
+
             case .subtitles:
-//                    vodPlayerDelegate?.vodPlayerSubtitle()
-                break
+                vodPlayerSubtitle()
+
             case .setting:
-//                    vodPlayerDelegate?.vodPlayerPlaylist()
-                break
-            case .skipPreview:
-                pause()
-//                    vodPlayerDelegate?.vodPlayerSkipPreview()
-                
+                vodPlayerPlaylist()
             default: break
             }
         }
@@ -177,7 +220,7 @@ extension VODPlayer: VODPlayerLayerViewDelegate {
             play()
         case .playedToTheEnd:
             backBlock?()
-   
+            
         default:
             break
         }
@@ -196,6 +239,41 @@ extension VODPlayer: VODPlayerLayerViewDelegate {
     
     public func vodPlayer(player: VODPlayerLayerView, playerIsPlaying playing: Bool) {
         playerControls.playStateDidChange(isPlaying: playing)
+    }
+    
+}
+
+
+
+// MARK: - Handle options
+extension VODPlayer {
+    
+    /// vodPlayerPlaylist
+    func vodPlayerPlaylist() {
+        vodQualityVideoVC = VODQualityVideoVC()
+        vodQualityVideoVC.vodPlayListViewDelegate = self
+        vc.presentPanModal(vodQualityVideoVC)
+    }
+    /// vodPlayerSubtitle
+    func vodPlayerSubtitle() {
+        vodSelectSubtitleVC = VODSelectSubtitleVC()
+        vodSelectSubtitleVC.vodPlayListViewDelegate = self
+        vc.presentPanModal(vodSelectSubtitleVC)
+    }
+}
+
+extension VODPlayer: VODPlayListViewDelegate {
+    
+    func didSelected(selected quality: VODPlayList) {
+        changeQuality(quality: quality)
+    }
+    
+    func didSelected(selected speed: VODPlaySpeed) {
+        changePlaySpeed(speed: speed)
+    }
+    
+    func didSelected(selected subtile: VODSubtitleLanguages) {
+        updateStateSubtitle(vodSubtitle: subtile)
     }
     
 }

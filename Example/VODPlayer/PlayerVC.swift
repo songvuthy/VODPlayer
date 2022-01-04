@@ -11,19 +11,19 @@ import VODPlayer
 import SnapKit
 
 class PlayerVC: UIViewController {
-    fileprivate var player = VODPlayer()
+    fileprivate var player: VODPlayer!
     fileprivate var resource: VODPlayerResource!
-    let portrait = CGRect(
-        x: 0,
-        y: UIApplication.shared.statusBarFrame.size.height != 0 ? UIApplication.shared.statusBarFrame.size.height : 0 ,
-        width: UIScreen.main.bounds.width,
-        height: (4 / 6) * UIScreen.main.bounds.width
-    )
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor =  .white
-        view.addSubview(player)
+        
+        // Config
         VODPlayerConf.btnPre10sPadding = 70
+        
+        // Add player on view
+        player = VODPlayer()
+        view.addSubview(player)
+        player.vc = self
         player.backBlock = {[self] in
             dismissVC()
         }
