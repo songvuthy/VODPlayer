@@ -212,7 +212,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = H43S5KDKV6;
+						DevelopmentTeam = Z97TWU6C5D;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -481,7 +481,7 @@
 			baseConfigurationReference = 687E6B19ADC291468949D28C /* Pods-VODPlayer_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H43S5KDKV6;
+				DEVELOPMENT_TEAM = Z97TWU6C5D;
 				INFOPLIST_FILE = VODPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -499,7 +499,7 @@
 			baseConfigurationReference = 5B56A1C1A6FA7E16D3C141B5 /* Pods-VODPlayer_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H43S5KDKV6;
+				DEVELOPMENT_TEAM = Z97TWU6C5D;
 				INFOPLIST_FILE = VODPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

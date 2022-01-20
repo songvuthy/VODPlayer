@@ -81,6 +81,7 @@
 		D5188C34D38400045DF80EF587AE6CB2 /* VODPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F9E44F01D90C82E0E2D9B82B3BDE2A40 /* VODPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D59C2826AD288ECFF576B2AFA312716C /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25479F58B67AA43E092C7B156C1B5C1B /* ConstraintRelation.swift */; };
 		D7AB9C68D50DE1D924C912C06E155E5E /* UIViewController+PanModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634A956F875BD442EB9650DCF3C3D127 /* UIViewController+PanModalPresenter.swift */; };
+		D91086812798FBB300DA46CD /* VODVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91086802798FBB300DA46CD /* VODVolumeView.swift */; };
 		DDF6E66C2A67A2A73E4FF5CBC1ACB9DA /* VODPlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA0E6A1AA472448CF5641878CBC918 /* VODPlayList.swift */; };
 		E25692D21EE78C4B2A0B571F53555A40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3447B6A50AA430A059E8197DFCDA88F /* UIKit.framework */; };
 		E36244E8BF4AC941E82DAF16DDF4BBC2 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716AD15FADF38A93170E034F2BCE457 /* ConstraintPriorityTarget.swift */; };
@@ -161,7 +162,7 @@
 		553D468422E91C60260356440C20A9C0 /* PanModalPresentable+LayoutHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "PanModalPresentable+LayoutHelpers.swift"; sourceTree = "<group>"; };
 		56006AA49A060CA2830F32CD6F394823 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
 		5C00AA425719E60DF920786A42687636 /* Pods-VODPlayer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VODPlayer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5C1C6FBD91FA05A06549655E3F31836A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		5C1C6FBD91FA05A06549655E3F31836A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5E99226518C4493CEF20414B163C6AC0 /* VODPlayer */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VODPlayer; path = VODPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		634A956F875BD442EB9650DCF3C3D127 /* UIViewController+PanModalPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+PanModalPresenter.swift"; sourceTree = "<group>"; };
 		6351256A96BF38E76BA5078ABF6D9703 /* VODPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODPlayer.swift; sourceTree = "<group>"; };
@@ -196,16 +197,16 @@
 		979486118B3E90C08386079D57962701 /* SnapKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9859EC3DFBC3EFEACCE62C17FB939DC9 /* Pods-VODPlayer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VODPlayer_Tests.modulemap"; sourceTree = "<group>"; };
 		9B4001E87FBC9C19EEF5F6538DD6DA5C /* PanModalAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PanModalAnimator.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1CD432F32277BB93DEAADA626ECEC5B /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
 		A51E99894F75F00A281BE6A32FBDE495 /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
 		A5E0F1FBDC9ED0ADD778C57A93A620F6 /* PanContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PanContainerView.swift; sourceTree = "<group>"; };
 		A7D358AA1606C7B2CDC8555485807E9E /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Source/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
-		A9C0147C3174DCA793E6F33B6B209B85 /* VODPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = VODPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A9C0147C3174DCA793E6F33B6B209B85 /* VODPlayer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = VODPlayer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AA2CA3DB5B57391BF1DB0D54D3CD98DD /* VODQualityVideoVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VODQualityVideoVC.swift; sourceTree = "<group>"; };
 		ADC17F379DD47C4F9FC4602A316FA960 /* VODPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VODPlayer-prefix.pch"; sourceTree = "<group>"; };
 		AE5FEFBF33B68BC45A4F3D6C304995BE /* Pods-VODPlayer_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VODPlayer_Tests-Info.plist"; sourceTree = "<group>"; };
-		B0D39D0993B1DF046770C0EFD80AB5B8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		B0D39D0993B1DF046770C0EFD80AB5B8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B0E245E5172BAD192E803558510A22BA /* Pods-VODPlayer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VODPlayer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		B1E417FAAFF02114F366038E4958F099 /* Pods-VODPlayer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VODPlayer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B5DD7F926602FCDF649C89B80C968F57 /* Connectivity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
@@ -225,6 +226,7 @@
 		D4D293F10B2FFE9BB9B1FBB7AE91A0BE /* Pods-VODPlayer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VODPlayer_Example-dummy.m"; sourceTree = "<group>"; };
 		D4E066869A95E00B949CBA4D2284C35F /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
 		D4F0B0B3F3EC4DB0A72541FB649B9F9A /* Pods-VODPlayer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VODPlayer_Example-frameworks.sh"; sourceTree = "<group>"; };
+		D91086802798FBB300DA46CD /* VODVolumeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VODVolumeView.swift; sourceTree = "<group>"; };
 		DA70301756F1BEDC7CBCC0AF84988885 /* BottomMaskView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BottomMaskView.swift; sourceTree = "<group>"; };
 		DC32AA2EFF666F34D70BAFCD927D88AD /* AirPlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AirPlay.swift; sourceTree = "<group>"; };
 		DDD4D524FF373B28DE3C95DC96C8AA72 /* VODPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VODPlayer.release.xcconfig; sourceTree = "<group>"; };
@@ -313,7 +315,6 @@
 			children = (
 				FE4FEF06D02CF3180560BD8A75A9074D /* PanModalPresentationDelegate.swift */,
 			);
-			name = Delegate;
 			path = Delegate;
 			sourceTree = "<group>";
 		};
@@ -336,7 +337,6 @@
 				553D468422E91C60260356440C20A9C0 /* PanModalPresentable+LayoutHelpers.swift */,
 				F72D5D1B4819434D7C389AC96FED1015 /* PanModalPresentable+UIViewController.swift */,
 			);
-			name = Presentable;
 			path = Presentable;
 			sourceTree = "<group>";
 		};
@@ -356,7 +356,6 @@
 				9B4001E87FBC9C19EEF5F6538DD6DA5C /* PanModalAnimator.swift */,
 				30B75AB20F3FD7AC5DCDE59B150C0093 /* PanModalPresentationAnimator.swift */,
 			);
-			name = Animator;
 			path = Animator;
 			sourceTree = "<group>";
 		};
@@ -423,7 +422,6 @@
 				BA9D58D26EA887618EB707C01B00615D /* Presenter */,
 				80D25A9294A3FFAD01D2E963401A6676 /* View */,
 			);
-			name = PanModal;
 			path = PanModal;
 			sourceTree = "<group>";
 		};
@@ -432,7 +430,6 @@
 			children = (
 				39C8CF4D902A3812FB336BE6C3C41F84 /* PanModalPresentationController.swift */,
 			);
-			name = Controller;
 			path = Controller;
 			sourceTree = "<group>";
 		};
@@ -477,7 +474,6 @@
 				6A9341666EAC154422A032092A7DC2D7 /* UILayoutSupport+Extensions.swift */,
 				843EFF0C650682C304D518A9092EE9FD /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -488,7 +484,6 @@
 				A5E0F1FBDC9ED0ADD778C57A93A620F6 /* PanContainerView.swift */,
 				1406A3F33FA43CACBA4D3462070A43CB /* PanModelHeaderView.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -510,6 +505,7 @@
 		8898BC58BC90D8A89B88FC6642A95E3A /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				D91086802798FBB300DA46CD /* VODVolumeView.swift */,
 				784A59E1EAF20D062EA2587D2950D76D /* AirPlayBackgrounView.swift */,
 				DA70301756F1BEDC7CBCC0AF84988885 /* BottomMaskView.swift */,
 				0040E4B76B03968CE61F43449F590D31 /* TopMaskView.swift */,
@@ -578,7 +574,6 @@
 				F6FA46D318A56FF036A9B13806554C3B /* PanModalPresenter.swift */,
 				634A956F875BD442EB9650DCF3C3D127 /* UIViewController+PanModalPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -882,6 +877,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D91086812798FBB300DA46CD /* VODVolumeView.swift in Sources */,
 				0D5DF93A901EC454C10A15D2D883DC7E /* AirPlay.swift in Sources */,
 				293C94691D1BBD7E6D486D8E1D8CF077 /* AirPlayBackgrounView.swift in Sources */,
 				5AFD6C7BF4FBB712808FEE21678708C0 /* BaseCollectionViewFlowLayout.swift in Sources */,
@@ -1206,8 +1202,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

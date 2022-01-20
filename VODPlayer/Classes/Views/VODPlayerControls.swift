@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import MediaPlayer
 
 @objc public protocol VODPlayerControlViewDelegate: AnyObject {
     /**
@@ -67,12 +68,18 @@ public class VODPlayerControls: VODBaseView {
     // Activty Indector for loading
     open var loadingIndicator  = UIActivityIndicatorView(style: .whiteLarge)
     
+    /// Gesture to change volume / brightness
+    open var panGesture: UIPanGestureRecognizer!
+    fileprivate var isVolume: Bool = false
+    fileprivate var volumeViewSlider: UISlider!
     //    MARK: - Variable view
     
     var mainMaskView   = UIView()
     var airplayView    = AirPlayBackgroundView()
     var topMaskView    = TopMaskView()
     var bottomMaskView = BottomMaskView()
+    var volumeView     = VODVolumeView()
+    var brightnessView = VODVolumeView(typeView: .brightness)
     var playButton   = UIButton(type: UIButton.ButtonType.custom)
     var next10Button = UIButton(type: UIButton.ButtonType.custom)
     var pre10Button  = UIButton(type: UIButton.ButtonType.custom)
@@ -243,6 +250,14 @@ public class VODPlayerControls: VODBaseView {
             isBufferFinishedFirstTime = true
         }
     }
+    fileprivate func configureVolume() {
+        let volumeView = MPVolumeView()
+        for view in volumeView.subviews {
+            if let slider = view as? UISlider {
+                self.volumeViewSlider = slider
+            }
+        }
+    }
     
     // MARK: - Action Response
     
@@ -358,13 +373,54 @@ public class VODPlayerControls: VODBaseView {
         delegate?.controlView(controlView: self, slider: sender, onSliderEvent: .touchUpInside)
         autoFadeOutControlViewWithAnimation()
     }
+    
+    @objc fileprivate func panDirection(_ pan: UIPanGestureRecognizer) {
+            let locationPoint = pan.location(in: self)
+            let velocityPoint = pan.velocity(in: self)
+            switch pan.state {
+            case .began:
+                if locationPoint.x < self.bounds.size.width / 2 {
+                    // Show Volume
+                    self.isVolume = true
+                    self.volumeView.alpha = 1
+                    
+                } else {
+                    // Show brightness
+                    self.isVolume = false
+                    self.brightnessView.alpha = 1
+                }
+                
+            case .changed:
+                verticalMoved(velocityPoint.y)
+            case .ended:
+                self.isVolume ? (self.volumeView.alpha = 0) : (self.brightnessView.alpha = 0)
+                self.isVolume = false
+            default:
+                break
+            }
+        }
+        
+        fileprivate func verticalMoved(_ value: CGFloat) {
+            if self.isVolume {
+                value > 0 ? ( volumeViewSlider.value -= (Float(value) / 10000)) : (volumeViewSlider.value += -(Float(value) / 10000))
+                volumeView.updateProgressView(percentage: CGFloat(volumeViewSlider.value) )
+            }
+            else{
+                value > 0 ? ( UIScreen.main.brightness -= (value / 10000)) : (UIScreen.main.brightness += -(value / 10000))
+                brightnessView.updateProgressView(percentage: UIScreen.main.brightness )
+            }
+        }
     //    MARK: - ConfigureLayout
     override func setupComponents() {
-        [airplayView, mainMaskView, playButton, pre10Button, next10Button,loadingIndicator].forEach({ addSubview($0) })
+        configureVolume()
+        
+        [airplayView, mainMaskView, playButton, pre10Button, next10Button,loadingIndicator, volumeView, brightnessView].forEach({ addSubview($0) })
         mainMaskView.backgroundColor = UIColor(white: 0, alpha: 0.5)
         // Add subView on main mask view
         [topMaskView, bottomMaskView].forEach({ mainMaskView.addSubview($0) })
         
+        volumeView.alpha     = 0
+        brightnessView.alpha = 0
         // AirPlay Background
         airplayView.isHidden = true
         
@@ -386,6 +442,8 @@ public class VODPlayerControls: VODBaseView {
         next10Button.setImage(VODImageResourcePath("VOD_Icon_Next_10"), for: .selected)
         next10Button.addTarget(self, action: #selector(onButtonPressed(_:)), for: .touchUpInside)
         
+        panGesture = PanDirectionGestureRecognizer(direction: .vertical ,target: self, action: #selector(self.panDirection(_:)))
+        self.addGestureRecognizer(panGesture)
         
         // Setup Event
         let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(onTapGestureTapped(_:)))
@@ -490,6 +548,18 @@ public class VODPlayerControls: VODBaseView {
         }
         
         loadingIndicator.center = center
+        
+        volumeView.snp.remakeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.width.equalTo(50)
+            make.left.equalToSuperview().offset(vodIsFullScreen ? 44 : 0)
+        }
+        
+        brightnessView.snp.remakeConstraints { make in
+            make.centerY.right.equalToSuperview()
+            make.width.equalTo(50)
+            make.right.equalToSuperview().offset(vodIsFullScreen ? -44 : 0)
+        }
     }
     
     public override func layoutSubviews() {
@@ -497,4 +567,48 @@ public class VODPlayerControls: VODBaseView {
         setupConstraint()
     }
     
+}
+
+
+enum PanDirection {
+    case vertical
+    case horizontal
+}
+
+struct Constaint {
+    let maxAngle: Double
+    let minSpeed: CGFloat
+
+    static let `default` = Constaint(maxAngle: 50, minSpeed: 50)
+}
+
+
+class PanDirectionGestureRecognizer: UIPanGestureRecognizer {
+
+    let direction: PanDirection
+
+    let constraint: Constaint
+
+
+    init(direction orientation: PanDirection, target: AnyObject, action: Selector, constraint limits: Constaint = Constaint.default) {
+        direction = orientation
+        constraint = limits
+        super.init(target: target, action: action)
+    }
+
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
+        super.touchesMoved(touches, with: event)
+        let tangent = tan(constraint.maxAngle * Double.pi / 180)
+        if state == .began {
+            let vel = velocity(in: view)
+            switch direction {
+            case .horizontal where abs(vel.y)/abs(vel.x) > CGFloat(tangent) || abs(vel.x) < constraint.minSpeed:
+                state = .cancelled
+            case .vertical where abs(vel.x)/abs(vel.y) > CGFloat(tangent) || abs(vel.y) < constraint.minSpeed:
+                state = .cancelled
+            default:
+                break
+            }
+        }
+    }
 }
