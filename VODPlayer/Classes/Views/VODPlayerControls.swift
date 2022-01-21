@@ -71,6 +71,7 @@ public class VODPlayerControls: VODBaseView {
     /// Gesture to change volume / brightness
     open var panGesture: UIPanGestureRecognizer!
     fileprivate var isVolume: Bool = false
+    fileprivate var isBrightness: Bool = false
     fileprivate var volumeViewSlider: UISlider!
     //    MARK: - Variable view
     
@@ -381,31 +382,36 @@ public class VODPlayerControls: VODBaseView {
             case .began:
                 if locationPoint.x < self.bounds.size.width / 2 {
                     // Show Volume
+                    if !VODPlayerConf.enableVolumeGestures { return }
                     self.isVolume = true
                     self.volumeView.alpha = 1
                     
                 } else {
                     // Show brightness
-                    self.isVolume = false
+                    if !VODPlayerConf.enableBrightnessGestures { return }
+                    self.isBrightness = true
                     self.brightnessView.alpha = 1
                 }
                 
             case .changed:
                 verticalMoved(velocityPoint.y)
             case .ended:
-                self.isVolume ? (self.volumeView.alpha = 0) : (self.brightnessView.alpha = 0)
                 self.isVolume = false
+                self.volumeView.alpha = 0
+                
+                self.brightnessView.alpha = 0
+                self.isBrightness = false
             default:
                 break
             }
         }
         
         fileprivate func verticalMoved(_ value: CGFloat) {
-            if self.isVolume {
+            if VODPlayerConf.enableVolumeGestures && self.isVolume {
                 value > 0 ? ( volumeViewSlider.value -= (Float(value) / 10000)) : (volumeViewSlider.value += -(Float(value) / 10000))
                 volumeView.updateProgressView(percentage: CGFloat(volumeViewSlider.value) )
             }
-            else{
+            else if VODPlayerConf.enableBrightnessGestures && self.isBrightness{
                 value > 0 ? ( UIScreen.main.brightness -= (value / 10000)) : (UIScreen.main.brightness += -(value / 10000))
                 brightnessView.updateProgressView(percentage: UIScreen.main.brightness )
             }

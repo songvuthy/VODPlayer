@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VODPlayer'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.swift_versions   = "5.0"
   s.summary          = 'A video player for iOS, based on AVPlayer.'
   s.description      = "A video player for iOS, based on AVPlayer, support the horizontal, vertical screen. support adjust volume, brightness and seek by slide, support subtitles."

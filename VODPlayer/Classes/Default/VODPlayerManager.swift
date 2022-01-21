@@ -40,7 +40,7 @@ open class VODPlayerManager {
     /// use gestures to set brightness, volume and play position
     open var enableBrightnessGestures  = true
     open var enableVolumeGestures      = true
-    open var enablePlaytimeGestures    = true
+    open var enablePlayTimeGestures    = true
     
 //    open var enableSubtile  = true
 //    open var enableDownload = true
