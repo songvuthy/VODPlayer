@@ -8,7 +8,6 @@
 import UIKit
 import SnapKit
 import MediaPlayer
-
 @objc public protocol VODPlayerControlViewDelegate: AnyObject {
     /**
      call when control view zoom in or zoom out
@@ -294,6 +293,17 @@ public class VODPlayerControls: VODBaseView {
         airplayView.setupDescription(deviceName: AirPlay.connectedDevice ?? "")
     }
     
+    // Set up view border when zoomed to fill
+    open func setBorderMainView() {
+        layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.6).cgColor
+        layer.borderWidth = 22
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {[self] in
+            UIView.animate(withDuration: 0.3) { [self] in
+                layer.borderColor = UIColor.clear.cgColor
+                layer.borderWidth = 0
+            }
+        }
+    }
     /**
      Call when some action button Pressed
      
@@ -399,8 +409,9 @@ public class VODPlayerControls: VODBaseView {
                 self.isVolume = false
                 self.volumeView.alpha = 0
                 
-                self.brightnessView.alpha = 0
                 self.isBrightness = false
+                self.brightnessView.alpha = 0
+              
             default:
                 break
             }
@@ -416,11 +427,24 @@ public class VODPlayerControls: VODBaseView {
                 brightnessView.updateProgressView(percentage: UIScreen.main.brightness )
             }
         }
+    /**
+     Call when some action pinch on view
+     
+     - parameter sender: UIPinchGestureRecognizer
+     */
+    
+    @objc func pinch(_ sender: UIPinchGestureRecognizer) {
+        if vodIsFullScreen && sender.state == .began{
+            controlViewAnimation(isShow: false)
+            delegate?.controlView(controlView: self, pinchGestureRecognizer: sender)
+        }
+        
+    }
     //    MARK: - ConfigureLayout
     override func setupComponents() {
         configureVolume()
         
-        [airplayView, mainMaskView, playButton, pre10Button, next10Button,loadingIndicator, volumeView, brightnessView].forEach({ addSubview($0) })
+        [airplayView, mainMaskView, playButton, pre10Button, next10Button, loadingIndicator, volumeView, brightnessView].forEach({ addSubview($0) })
         mainMaskView.backgroundColor = UIColor(white: 0, alpha: 0.5)
         // Add subView on main mask view
         [topMaskView, bottomMaskView].forEach({ mainMaskView.addSubview($0) })
@@ -450,6 +474,9 @@ public class VODPlayerControls: VODBaseView {
         
         panGesture = PanDirectionGestureRecognizer(direction: .vertical ,target: self, action: #selector(self.panDirection(_:)))
         self.addGestureRecognizer(panGesture)
+        
+        let pinch = UIPinchGestureRecognizer(target: self, action: #selector(pinch(_:)))
+        self.addGestureRecognizer(pinch)
         
         // Setup Event
         let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(onTapGestureTapped(_:)))

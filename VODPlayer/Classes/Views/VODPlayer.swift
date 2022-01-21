@@ -142,7 +142,17 @@ extension VODPlayer{
 extension VODPlayer: VODPlayerControlViewDelegate {
     
     public func controlView(controlView: VODPlayerControls, pinchGestureRecognizer sender: UIPinchGestureRecognizer) {
-        
+        if sender.scale > 1 {
+            if playerLayer.aspectRatio == .default {
+                playerLayer.aspectRatio = .fullScreen
+            }
+            controlView.setBorderMainView()
+        } else if sender.scale < 1{
+            if playerLayer.aspectRatio == .fullScreen {
+                playerLayer.aspectRatio = .default
+            }
+        }
+        Vibration.medium.vibrate()
     }
     
     public func controlView(controlView: VODPlayerControls, didPressButton button: UIButton) {
